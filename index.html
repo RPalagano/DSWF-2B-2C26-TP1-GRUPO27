@@ -1,38 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participantes</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-
-    <header>
-        <h1>Participantes</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conoce al equipo detrás de Tu Máquina Retro Dev." />
+    <title>Tu Máquina Retro Dev — Conoce al equipo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="scanlines-active">
+    <header class="arcade-header">
+      <div class="header-top-hud">
+        <div class="hud-item"><span>HIGH SCORE:</span><span class="hud-value">999,990</span></div>
+        <div class="hud-item"><span>SISTEMA:</span><span class="hud-value">DEV-ARCADE v1.0</span></div>
+        <div class="hud-item"><span>CRÉDITOS:</span><span class="hud-value credit-count-val">02</span></div>
+      </div>
+      <div class="header-main-nav container">
+        <a class="brand-logo" href="index.html" aria-label="Tu Máquina Retro Dev, portada">
+          <span class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z"/></svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">TU MÁQUINA RETRO DEV</span>
+            <span class="brand-subtitle">Un equipo, una partida</span>
+          </span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+          <ul class="nav-menu" id="nav-menu-list"><li><a href="index.html" class="nav-link active">PORTADA</a></li><li class="nav-dropdown"><button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="character-menu"><li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li><li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li><li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li><li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li></ul></li><li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li></ul>
+        </nav>
+        <div class="header-actions">
+          <button class="arcade-tool-btn" id="toggle-sound-btn" type="button" title="Activar o desactivar sonido retro">🔊 AUDIO ON</button>
+          <button class="arcade-tool-btn active" id="toggle-scanlines-btn" type="button" title="Activar o desactivar líneas CRT">SCANLINES</button>
+        </div>
+      </div>
     </header>
 
-    <main class="participantes">
-        <div class="card">
-            <h2>Participante 1</h2>
-            <a href="participante1.html">Ver perfil</a>
+    <main>
+      <section class="hero-arcade" id="inicio">
+        <div class="container">
+          <div class="arcade-cabinet-frame">
+            <div class="hero-grid">
+              <div class="hero-text-content">
+                <p class="hero-badge-arcade">★ CHARACTER SELECT: EDICIÓN EQUIPO ★</p>
+                <h1 class="hero-title">¡INSERTA UNA MONEDA Y <span>ELIGE TU PERSONAJE!</span></h1>
+                <p class="hero-description"><strong>Tu Máquina Retro Dev</strong> es una presentación de nuestro equipo con forma de máquina arcade: cada integrante es un personaje seleccionable. Explora sus perfiles y conoce quiénes están detrás del proyecto.</p>
+                <div class="hero-actions">
+                  <button class="btn-arcade btn-coin btn-insert-coin" type="button"><span aria-hidden="true">🪙</span> INSERTAR MONEDA</button>
+                  <a href="#jugadores" class="btn-arcade btn-cyan">CONOCER AL EQUIPO</a>
+                  <a href="bitacora.html" class="btn-arcade btn-outline">VER BITÁCORA</a>
+                </div>
+              </div>
+              <div class="arcade-screen-mockup" aria-label="Pantalla de selección de personajes">
+                <div class="screen-crt-inner">
+                  <div class="screen-marquee"><span class="marquee-text">★ INSERT COIN TO START ★</span></div>
+                  <div class="screen-player-preview">
+                    <div class="pixel-avatar-frame" aria-hidden="true">👾</div>
+                    <div class="preview-name">DEV TEAM</div>
+                    <div class="preview-role">4 PERSONAJES · 1 EQUIPO</div>
+                    <p>Selecciona una tarjeta para conocer a cada integrante.</p>
+                  </div>
+                </div>
+                <div class="coin-door"><div class="coin-slot"><div class="coin-slit" aria-hidden="true"></div><span class="coin-status-text">CRÉDITOS: <span class="credit-count-val">02</span></span></div><button class="btn-arcade btn-coin btn-insert-coin" type="button">+ INSERTAR</button></div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="card">
-            <h2>Participante 2</h2>
-            <a href="participante2.html">Ver perfil</a>
+      <section class="section-roster" id="jugadores">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-badge">CHARACTER SELECT</span>
+            <h2 class="section-title">NUESTRO EQUIPO</h2>
+            <p class="section-subtitle">¡Elige un personaje! Cada tarjeta representa a una persona del equipo. Los perfiles se completarán con la información real de sus integrantes.</p>
+          </header>
+          <div class="roster-grid">
+            <a href="perfil-integrante-1.html" class="player-card"><span class="player-tag tag-p1">P1</span><div class="player-avatar-box" aria-hidden="true"><svg class="player-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg></div><div class="player-info-block"><h3 class="player-name">Integrante 1</h3><p class="player-role-badge">Personaje por completar</p></div><p class="player-select-label">PERFIL PRÓXIMAMENTE</p></a>
+            <a href="perfil-integrante-2.html" class="player-card"><span class="player-tag tag-p2">P2</span><div class="player-avatar-box" aria-hidden="true"><svg class="player-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg></div><div class="player-info-block"><h3 class="player-name">Integrante 2</h3><p class="player-role-badge">Personaje por completar</p></div><p class="player-select-label">PERFIL PRÓXIMAMENTE</p></a>
+            <a href="perfil-integrante-3.html" class="player-card"><span class="player-tag tag-p3">P3</span><div class="player-avatar-box" aria-hidden="true"><svg class="player-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg></div><div class="player-info-block"><h3 class="player-name">Integrante 3</h3><p class="player-role-badge">Personaje por completar</p></div><p class="player-select-label">PERFIL PRÓXIMAMENTE</p></a>
+            <a href="perfil-integrante-4.html" class="player-card"><span class="player-tag tag-p4">P4</span><div class="player-avatar-box" aria-hidden="true"><svg class="player-avatar-icon" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)" stroke-width="2"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 1 0-16 0"></path></svg></div><div class="player-info-block"><h3 class="player-name">Integrante 4</h3><p class="player-role-badge">Personaje por completar</p></div><p class="player-select-label">PERFIL PRÓXIMAMENTE</p></a>
+          </div>
         </div>
+      </section>
 
-        <div class="card">
-            <h2>Participante 3</h2>
-            <a href="participante3.html">Ver perfil</a>
+      <section class="section-interactive-arcade" id="interaccion">
+        <div class="container">
+          <div class="arcade-test-station">
+            <div class="station-header"><h2 class="station-title">PRUEBA LA CONSOLA</h2><span class="station-status-pill">LISTA</span></div>
+            <div class="station-body">
+              <div class="arcade-console-screen" aria-live="polite"><div class="console-output-log" id="arcade-console-log"><div class="console-line">> Elige un botón para iniciar.</div></div></div>
+              <div class="station-controls"><p>Una interacción sencilla para darle vida a la portada.</p><div class="button-grid-arcade"><button class="btn-joystick-action btn-action-a" id="btn-action-a" type="button">[A] INICIAR</button><button class="btn-joystick-action btn-action-b" id="btn-action-b" type="button">[B] SALUDAR</button><button class="btn-joystick-action btn-action-c" id="btn-action-c" type="button">[C] SORPRESA</button></div></div>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="card">
-            <h2>Participante 4</h2>
-            <a href="participante4.html">Ver perfil</a>
-        </div>
-</body>
+    <footer class="arcade-footer"><div class="container"><div class="footer-bottom"><p>Tu Máquina Retro Dev · Presentación del equipo</p><a href="bitacora.html">Consultar bitácora</a></div></div></footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
-

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integrante 4 (P4) — Tu Máquina Retro Dev</title>
+    <meta name="description" content="Perfil de Integrante 4: Desarrollador de Lógica de Juegos y Arquitectura Frontend en Tu Máquina Retro Dev." />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="scanlines-active">
+    <!-- HEADER HUD ARCADE -->
+    <header class="arcade-header">
+      <div class="header-top-hud">
+        <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value" style="color:var(--neon-yellow);">P4 / INTEGRANTE 4</span></div>
+        <div class="hud-item"><span>ROL:</span> <span class="hud-value">GAME LOGIC CRAFTER</span></div>
+        <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
+      </div>
+
+      <div class="header-main-nav container">
+        <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
+          <div class="brand-icon" style="border-color:var(--neon-yellow);">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">TU MÁQUINA RETRO DEV</span>
+            <span class="brand-subtitle">Perfil Personaje 4</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+          <ul class="nav-menu" id="nav-menu-list"><li><a href="index.html" class="nav-link">PORTADA</a></li><li class="nav-dropdown"><button class="nav-link dropdown-toggle active" type="button" aria-expanded="false" aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="character-menu"><li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li><li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li><li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li><li><a href="perfil-integrante-4.html" class="nav-link active">PERSONAJE 4</a></li></ul></li><li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li></ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
+          <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container profile-page-header">
+      <!-- BOTÓN VOLVER A LA PORTADA -->
+      <div class="back-navigation">
+        <a href="index.html" class="btn-back">
+          ← VOLVER A LA MÁQUINA ARCADE
+        </a>
+      </div>
+
+      <!-- TARJETA PRINCIPAL DEL PERSONAJE 4 -->
+      <section class="profile-hero-card" style="border-color:#423b18;" aria-label="Información principal de Integrante 4">
+        <div class="profile-avatar-large" style="border-color:var(--neon-yellow); box-shadow:0 0 20px rgba(255,230,0,0.4);">
+          <!-- Avatar estilizado en CSS/SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+        </div>
+
+        <div class="profile-bio-info">
+          <div class="tag-p4" style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
+            PERSONAJE 4 [GAME LOGIC & UI]
+          </div>
+          <h1>Integrante 4</h1>
+          <div class="profile-role-title" style="color:var(--neon-yellow);">Interaction Designer & Gameplay Architect</div>
+          <div class="profile-stats-pill-row">
+            <div class="profile-badge">
+              <span>📍 Ciudad:</span>
+              <strong>Medellín</strong>
+            </div>
+            <div class="profile-badge">
+              <span>🎂 Edad:</span>
+              <strong>23 años</strong>
+            </div>
+            <div class="profile-badge">
+              <span>🕹️ Especialidad:</span>
+              <strong>Lógica de Juego & Fluidez</strong>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn-arcade btn-coin btn-insert-coin" type="button">
+            🪙 +1 CRÉDITO
+          </button>
+        </div>
+      </section>
+
+      <!-- SECCIONES EN COLUMNAS: HABILIDADES + FAVORITOS -->
+      <div class="profile-sections-grid">
+        <!-- 4 HABILIDADES PRINCIPALES -->
+        <section class="profile-panel" aria-labelledby="skills-heading-p4">
+          <h2 class="panel-heading" id="skills-heading-p4" style="color:var(--neon-yellow);">
+            <span aria-hidden="true">🎮</span> HABILIDADES</h2>
+
+          <ul class="skills-list skill-list-simple"><li class="skill-item">Mecánicas de Videojuegos 2D</li><li class="skill-item">Estructuras de Datos en Frontend</li><li class="skill-item">Interacción y Microanimaciones</li><li class="skill-item">Optimización de Rendimiento & 60 FPS</li></ul></section>
+
+        <!-- FAVORITOS: 3 PELÍCULAS Y 3 DISCOS -->
+        <section class="profile-panel" aria-labelledby="favorites-heading-p4">
+          <h2 class="panel-heading" id="favorites-heading-4">PELÍCULAS FAVORITAS</h2>
+
+          <h3 style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
+            TRES PELÍCULAS FAVORITAS
+          </h3>
+          <div class="media-items-grid" style="margin-bottom: 1.8rem;">
+            <div class="media-card">
+              <div class="media-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Ready Player One (2018)</div>
+                <div class="media-subtitle">Dir. Steven Spielberg — Homenaje masivo a la cultura gamer y Easter eggs arcade.</div>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Akira (1988)</div>
+                <div class="media-subtitle">Dir. Katsuhiro Otomo — Animación tradicional insuperable y estética cyberpunk.</div>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Wreck-It Ralph (2012)</div>
+                <div class="media-subtitle">Dir. Rich Moore — La vida secreta dentro de las cabinas arcade de los 80s.</div>
+              </div>
+            </div>
+          </div></section><section class="profile-panel" aria-labelledby="discos-heading-4"><h2 class="panel-heading" id="discos-heading-4">DISCOS FAVORITOS</h2>
+          <div class="media-items-grid">
+            <div class="media-card">
+              <div class="media-icon" style="color: var(--neon-yellow);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Disasterpeace — FEZ OST (2012)</div>
+                <div class="media-subtitle">Chiptunes ambientales y sintetizadores misteriosos de otro mundo.</div>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-icon" style="color: var(--neon-yellow);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Celeste Original Soundtrack (2018)</div>
+                <div class="media-subtitle">Lena Raine — Melodías de piano y sintetizador llenas de determinación.</div>
+              </div>
+            </div>
+
+            <div class="media-card">
+              <div class="media-icon" style="color: var(--neon-yellow);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <div class="media-details">
+                <div class="media-title">Tron: Legacy Soundtrack (2010)</div>
+                <div class="media-subtitle">Daft Punk — La máxima orquestación cinemática para programadores.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- INTERACCIÓN DINÁMICA PROPIA: TEST DE REFLEJOS ARCADE -->
+            <section class="profile-interactive-panel" style="border-color:var(--neon-yellow); box-shadow:0 0 25px rgba(255,230,0,0.15);" aria-labelledby="interactive-heading-p4">
+        <h2 class="interactive-title" id="interactive-heading-p4" style="color:var(--neon-yellow);">★ QUIZ ARCADE: DESAFÍO DEV ★</h2>
+        <p class="interactive-desc">Responde tres preguntas rápidas sobre desarrollo web y descubre tu puntaje.</p>
+        <div class="quiz-box" id="p4-quiz">
+          <p class="quiz-progress" id="p4-quiz-progress">Pregunta 1 de 3</p>
+          <h3 class="quiz-question" id="p4-quiz-question" aria-live="polite">¿Qué tecnología estructura el contenido de una página web?</h3>
+          <div class="quiz-options" id="p4-quiz-options">
+            <button class="btn-arcade btn-outline" type="button" data-answer="HTML">HTML</button>
+            <button class="btn-arcade btn-outline" type="button" data-answer="CSS">CSS</button>
+            <button class="btn-arcade btn-outline" type="button" data-answer="JavaScript">JavaScript</button>
+          </div>
+          <p class="quiz-feedback" id="p4-quiz-feedback" aria-live="polite"></p>
+          <button class="btn-arcade btn-coin" id="p4-quiz-restart" type="button" hidden>JUGAR OTRA VEZ</button>
+        </div>
+      </section>
+
+      <!-- NAVEGADOR ENTRE PERSONAJES -->
+      <nav class="profile-switcher" aria-label="Navegación entre perfiles">
+        <a href="perfil-integrante-3.html" class="btn-arcade btn-pink">
+          ← ANTERIOR: PERSONAJE 3
+        </a>
+        <a href="index.html" class="btn-arcade btn-cyan">
+          VOLVER A LA PORTADA →
+        </a>
+      </nav>
+    </main>
+
+    <footer class="arcade-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 Tu Máquina Retro Dev — Perfil Personaje 4 (Integrante 4).</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

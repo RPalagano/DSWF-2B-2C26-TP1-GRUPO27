@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitácora de Desarrollo — Tu Máquina Retro Dev</title>
+    <meta name="description" content="Registro y bitácora técnica del proyecto Tu Máquina Retro Dev: Decisiones de diseño, organización, problemas y soluciones." />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="scanlines-active">
+    <!-- HEADER HUD ARCADE -->
+    <header class="arcade-header">
+      <div class="header-top-hud">
+        <div class="hud-item"><span>REGISTRO:</span> <span class="hud-value">DEV-LOG / ROM-01</span></div>
+        <div class="hud-item"><span>ESTADO:</span> <span class="hud-value">ETAPA 1 FINALIZADA</span></div>
+        <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
+      </div>
+
+      <div class="header-main-nav container">
+        <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z"/></svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">TU MÁQUINA RETRO DEV</span>
+            <span class="brand-subtitle">Bitácora Técnica</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+          <ul class="nav-menu" id="nav-menu-list"><li><a href="index.html" class="nav-link">PORTADA</a></li><li class="nav-dropdown"><button class="nav-link dropdown-toggle" type="button" aria-expanded="false" aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="character-menu"><li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li><li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li><li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li><li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li></ul></li><li><a href="bitacora.html" class="nav-link active">BITÁCORA</a></li></ul>
+        </nav>
+
+        <div class="header-actions">
+          <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
+          <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="bitacora-header">
+        <div class="back-navigation" style="text-align: left;">
+          <a href="index.html" class="btn-back">
+            ← VOLVER A LA MÁQUINA ARCADE
+          </a>
+        </div>
+
+        <span class="section-badge">MEMORIA DEL SISTEMA</span>
+        <h1 class="section-title">BITÁCORA DE DESARROLLO</h1>
+        <p class="section-subtitle">
+          Documentación estructurada sobre la evolución del proyecto "Tu Máquina Retro Dev". Registro de arquitectura, decisiones estéticas, dificultades y soluciones aplicadas.
+        </p>
+
+        <!-- FILTROS POR CATEGORÍA CON JS VANILLA -->
+        <div class="bitacora-filters">
+          <button class="filter-btn active" data-filter="todos" type="button">TODAS LAS ENTRADAS</button>
+          <button class="filter-btn" data-filter="diseno" type="button">DECISIONES DE DISEÑO</button>
+          <button class="filter-btn" data-filter="organizacion" type="button">ORGANIZACIÓN</button>
+          <button class="filter-btn" data-filter="problemas" type="button">PROBLEMAS ENCONTRADOS</button>
+          <button class="filter-btn" data-filter="soluciones" type="button">SOLUCIONES APLICADAS</button>
+          <button class="filter-btn" data-filter="cambios" type="button">CAMBIOS REALIZADOS</button>
+        </div>
+      </div>
+
+      <!-- TIMELINE DE REGISTROS -->
+      <section class="bitacora-timeline" aria-label="Entradas de la bitácora">
+        
+        <!-- REGISTRO 1: DECISIONES DE DISEÑO -->
+        <article class="log-entry category-diseno" id="diseno">
+          <div class="log-header">
+            <span class="log-tag tag-diseno">Decisión de Diseño</span>
+            <span class="log-date">Semana 1 — Fase Inicial</span>
+          </div>
+          <h2 class="log-title">1. Estética Arcade Retro con Ergonomía y Legibilidad Moderna</h2>
+          <div class="log-content">
+            <p>
+              Para transmitir la sensación de una máquina arcade auténtica sin cansar la vista del usuario, tomamos decisiones cromáticas y tipográficas precisas:
+            </p>
+            <ul>
+              <li><strong>Tipografía dual:</strong> Empleamos <code>'Press Start 2P'</code> exclusivamente para títulos, botones, puntuaciones y HUD, mientras que para los textos de lectura elegimos <code>'Chakra Petch'</code>, una fuente retro-tecnológica de alta nitidez en pantallas de cualquier resolución.</li>
+              <li><strong>Efecto Scanlines controlado:</strong> El filtro CRT simula las líneas de barrido de los monitores de tubo catódico de los años 80/90, pero agregamos un botón en el header para que cualquier usuario pueda desactivarlo si prefiere máxima claridad.</li>
+              <li><strong>Sin peso de imágenes externas:</strong> Para esta primera fase no usamos archivos de imagen pesados; todos los gabinetes, ranuras de moneda y avatares fueron construidos con CSS3 puro y formas SVG vectoriales ligeras.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- REGISTRO 2: ORGANIZACIÓN DEL TRABAJO -->
+        <article class="log-entry category-organizacion" id="organizacion">
+          <div class="log-header">
+            <span class="log-tag tag-organizacion">Organización</span>
+            <span class="log-date">Semana 1 — Asignación de Roles</span>
+          </div>
+          <h2 class="log-title">2. Distribución de Tareas y Arquitectura por Archivos</h2>
+          <div class="log-content">
+            <p>
+              El equipo acordó una separación estricta de responsabilidades y una estructura de carpetas fácil de auditar por estudiantes:
+            </p>
+            <ul>
+              <li><strong>Estructura clara:</strong> Cada integrante cuenta con su propia página HTML independiente (<code>perfil-integrante-1.html</code>, <code>perfil-integrante-2.html</code>, <code>perfil-integrante-3.html</code>), lo que evita conflictos en el control de versiones.</li>
+              <li><strong>CSS unificado:</strong> Toda la hoja de estilos se centralizó en <code>/css/styles.css</code>, usando variables CSS (<code>--neon-cyan</code>, <code>--bg-cabinet</code>) para que cambiar un color global sea cuestión de un solo ajuste.</li>
+              <li><strong>JavaScript Vanilla modular:</strong> Lógica centralizada en <code>/js/script.js</code>, dividida en módulos de audio chiptune, controles globales y funciones específicas por página.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- REGISTRO 3: PROBLEMAS ENCONTRADOS -->
+        <article class="log-entry category-problemas" id="problemas">
+          <div class="log-header">
+            <span class="log-tag tag-problemas">Problemas Encontrados</span>
+            <span class="log-date">Semana 2 — Pruebas de Breakpoints</span>
+          </div>
+          <h2 class="log-title">3. Desafíos de Adaptabilidad y Desbordamiento en Celulares</h2>
+          <div class="log-content">
+            <p>
+              Al probar el diseño en dispositivos móviles estrechos (pantallas de 400px o menos), detectamos los siguientes inconvenientes:
+            </p>
+            <ul>
+              <li><strong>Desbordamiento de la marquesina:</strong> Los títulos en pixel art con tamaños fijos en píxeles generaban scroll horizontal involuntario en móviles compactos.</li>
+              <li><strong>Espacio del HUD superior:</strong> La barra con "HIGH SCORE" y "CRÉDITOS" ocupaba demasiado espacio vertical si se mantenía en una sola fila rígida.</li>
+              <li><strong>Políticas de autoplay en navegadores:</strong> Los navegadores modernos bloquean la reproducción de audio sintético si el usuario aún no interactuó con la página.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- REGISTRO 4: SOLUCIONES APLICADAS -->
+        <article class="log-entry category-soluciones" id="soluciones">
+          <div class="log-header">
+            <span class="log-tag tag-soluciones">Soluciones Aplicadas</span>
+            <span class="log-date">Semana 2 — Refactorización</span>
+          </div>
+          <h2 class="log-title">4. Tipografía Fluida clamp(), Web Audio API y Breakpoints Obligatorios</h2>
+          <div class="log-content">
+            <p>
+              Implementamos soluciones nativas para resolver los problemas detectados sin recurrir a librerías externas:
+            </p>
+            <ul>
+              <li><strong>clamp() para títulos:</strong> Definimos <code>font-size: clamp(1.3rem, 4vw, 2.3rem)</code> para asegurar que el título del arcade nunca desborde ni se quiebre en dispositivos de 400px.</li>
+              <li><strong>Breakpoints exactos:</strong> Definimos media queries en <strong>1200px</strong> (escritorio amplio), <strong>900px</strong> (tablets con menú hamburguesa desplegable) y <strong>400px</strong> (celulares en una sola columna vertical con botones de tamaño táctil mayor a 44px).</li>
+              <li><strong>Sintetizador Web Audio API:</strong> Los efectos de sonido de monedas (B5 a E6) y clics se generan en tiempo real con osciladores <code>square</code> y <code>triangle</code> sólo tras el primer clic del usuario, cumpliendo al 100% las políticas del navegador.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- REGISTRO 5: CAMBIOS REALIZADOS -->
+        <article class="log-entry category-cambios" id="cambios">
+          <div class="log-header">
+            <span class="log-tag tag-cambios">Cambios Realizados</span>
+            <span class="log-date">Semana 3 — Entrega Etapa 1</span>
+          </div>
+          <h2 class="log-title">5. Cierre de la Primera Etapa y Preparación para la Siguiente</h2>
+          <div class="log-content">
+            <p>
+              Resumen de los componentes completados y listos para la segunda etapa:
+            </p>
+            <ul>
+              <li><strong>Portada completa:</strong> Presentación como máquina arcade para el público, botón funcional para insertar monedas (con contador reactivo), selección de personajes P1, P2, P3 y P4 y consola de comandos dev.</li>
+              <li><strong>3 Perfiles individuales listos:</strong> Cada perfil cuenta con sus 4 habilidades cuantificadas, 3 películas, 3 discos y su propia interacción JavaScript funcional.</li>
+              <li><strong>Bitácora interactiva:</strong> Sistema de filtrado por etiquetas para auditar cada etapa del desarrollo del equipo.</li>
+              <li><strong>Siguiente etapa:</strong> Reemplazo de placeholders por fotografías y avatares finales de los integrantes, y detalles gráficos complementarios.</li>
+            </ul>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- BOTONES DE RETORNO -->
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <a href="index.html" class="btn-arcade btn-coin">
+          VOLVER A LA PORTADA PRINCIPAL
+        </a>
+      </div>
+    </main>
+
+    <footer class="arcade-footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 Tu Máquina Retro Dev — Bitácora del Equipo.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
