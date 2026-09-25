@@ -1,215 +1,296 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sofía Valenzuela (P2) — Tu Máquina Retro Dev</title>
-    <meta name="description" content="Perfil de Sofía Valenzuela: Desarrolladora Backend y Arquitecta de Datos en Tu Máquina Retro Dev." />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="scanlines-active">
-    <!-- HEADER HUD ARCADE -->
-    <header class="arcade-header">
-      <div class="header-top-hud">
-        <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value" style="color:var(--neon-pink);">P2 / SOFÍA VALENZUELA</span></div>
-        <div class="hud-item"><span>ROL:</span> <span class="hud-value">BACKEND WIZARD</span></div>
-        <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
-      </div>
 
-      <div class="header-main-nav container">
-        <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
-          <div class="brand-icon" style="border-color:var(--neon-pink);">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z"/></svg>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">TU MÁQUINA RETRO DEV</span>
-            <span class="brand-subtitle">Perfil Personaje 2</span>
-          </div>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sofía Valenzuela (P2) — Tu Máquina Retro Dev</title>
+  <meta name="description"
+    content="Perfil de Sofía Valenzuela: Desarrolladora Backend y Arquitecta de Datos en Tu Máquina Retro Dev." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
 
-        <nav aria-label="Navegación principal">
-          <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
-          <ul class="nav-menu" id="nav-menu-list"><li><a href="index.html" class="nav-link">PORTADA</a></li><li class="nav-dropdown"><button class="nav-link dropdown-toggle active" type="button" aria-expanded="false" aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="character-menu"><li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li><li><a href="perfil-integrante-2.html" class="nav-link active">PERSONAJE 2</a></li><li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li><li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li></ul></li><li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li></ul>
-        </nav>
+<body class="scanlines-active">
+  <!-- HEADER HUD ARCADE -->
+  <header class="arcade-header">
+    <div class="header-top-hud">
+      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value" style="color:var(--neon-pink);">P2 / SOFÍA
+          VALENZUELA</span></div>
+      <div class="hud-item"><span>ROL:</span> <span class="hud-value">BACKEND WIZARD</span></div>
+      <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
+    </div>
 
-        <div class="header-actions">
-          <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
-          <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
-        </div>
-      </div>
-    </header>
-
-    <main class="container profile-page-header">
-      <!-- BOTÓN VOLVER A LA PORTADA -->
-      <div class="back-navigation">
-        <a href="index.html" class="btn-back">
-          ← VOLVER A LA MÁQUINA ARCADE
-        </a>
-      </div>
-
-      <!-- TARJETA PRINCIPAL DEL PERSONAJE 2 -->
-      <section class="profile-hero-card" style="border-color:#3d1a3c;" aria-label="Información principal de Sofía Valenzuela">
-        <div class="profile-avatar-large" style="border-color:var(--neon-pink); box-shadow:0 0 20px rgba(255,0,119,0.4);">
-          <!-- Avatar estilizado en CSS/SVG -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="2">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
+    <div class="header-main-nav container">
+      <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
+        <div class="brand-icon" style="border-color:var(--neon-pink);">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z" />
           </svg>
         </div>
-
-        <div class="profile-bio-info">
-          <div class="tag-p2" style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
-            PERSONAJE 2 [BACKEND ARCHITECT]
-          </div>
-          <h1>Sofía Valenzuela</h1>
-          <div class="profile-role-title" style="color:var(--neon-pink);">Database Wizard & API Crafter</div>
-          <div class="profile-stats-pill-row">
-            <div class="profile-badge">
-              <span>📍 Ciudad:</span>
-              <strong>Santiago</strong>
-            </div>
-            <div class="profile-badge">
-              <span>🎂 Edad:</span>
-              <strong>24 años</strong>
-            </div>
-            <div class="profile-badge">
-              <span>🛡️ Especialidad:</span>
-              <strong>Bases de Datos & APIs</strong>
-            </div>
-          </div>
+        <div class="brand-text">
+          <span class="brand-title">TU MÁQUINA RETRO DEV</span>
+          <span class="brand-subtitle">Perfil Personaje 2</span>
         </div>
+      </a>
 
-        <div>
-          <button class="btn-arcade btn-coin btn-insert-coin" type="button">
-            🪙 +1 CRÉDITO
-          </button>
-        </div>
-      </section>
+      <nav aria-label="Navegación principal">
+        <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación"
+          aria-expanded="false">☰</button>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link">PORTADA</a></li>
+          <li class="nav-dropdown"><button class="nav-link dropdown-toggle active" type="button" aria-expanded="false"
+              aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button>
+            <ul class="dropdown-menu" id="character-menu">
+              <li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li>
+              <li><a href="perfil-integrante-2.html" class="nav-link active">PERSONAJE 2</a></li>
+              <li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li>
+              <li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li>
+            </ul>
+          </li>
+          <li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li>
+        </ul>
+      </nav>
 
-      <!-- SECCIONES EN COLUMNAS: HABILIDADES + FAVORITOS -->
-      <div class="profile-sections-grid">
-        <!-- 4 HABILIDADES PRINCIPALES -->
-        <section class="profile-panel" aria-labelledby="skills-heading-p2">
-          <h2 class="panel-heading" id="skills-heading-p2" style="color:var(--neon-pink);">
-            <span aria-hidden="true">💾</span> HABILIDADES</h2>
+      <div class="header-actions">
+        <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
+        <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
+      </div>
+    </div>
+  </header>
 
-          <ul class="skills-list skill-list-simple"><li class="skill-item">Arquitectura de APIs RESTful</li><li class="skill-item">Modelado de Bases de Datos SQL</li><li class="skill-item">Lógica Asíncrona en JavaScript</li><li class="skill-item">Seguridad Web & Encriptación</li></ul></section>
+  <main class="container profile-page-header">
+    <!-- BOTÓN VOLVER A LA PORTADA -->
+    <div class="back-navigation">
+      <a href="index.html" class="btn-back">
+        ← VOLVER A LA MÁQUINA ARCADE
+      </a>
+    </div>
 
-        <!-- FAVORITOS: 3 PELÍCULAS Y 3 DISCOS -->
-        <section class="profile-panel" aria-labelledby="favorites-heading-p2">
-          <h2 class="panel-heading" id="favorites-heading-2">PELÍCULAS FAVORITAS</h2>
-
-          <h3 style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
-            TRES PELÍCULAS FAVORITAS
-          </h3>
-          <div class="media-items-grid" style="margin-bottom: 1.8rem;">
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">The Matrix (1999)</div>
-                <div class="media-subtitle">Hnas. Wachowski — La filosofía del código binario y la simulación virtual.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">WarGames (1983)</div>
-                <div class="media-subtitle">Dir. John Badham — Modems acústicos, pantallas de fósforo y lógica de red.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Hackers (1995)</div>
-                <div class="media-subtitle">Dir. Iain Softley — Cultura cyber-punk noventera y comandos de terminal.</div>
-              </div>
-            </div>
-          </div></section><section class="profile-panel" aria-labelledby="discos-heading-2"><h2 class="panel-heading" id="discos-heading-2">DISCOS FAVORITOS</h2>
-          <div class="media-items-grid">
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">The Fat of the Land (1997)</div>
-                <div class="media-subtitle">The Prodigy — Beats pesados y energía electrónica cruda para sesiones de debug.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Homework (1997)</div>
-                <div class="media-subtitle">Daft Punk — Ritmos de sintetizadores repetitivos y precisos como un reloj de CPU.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Computer World (1981)</div>
-                <div class="media-subtitle">Kraftwerk — Los padres de la música electrónica computarizada.</div>
-              </div>
-            </div>
-          </div>
-        </section>
+    <!-- TARJETA PRINCIPAL DEL PERSONAJE 2 -->
+    <section class="profile-hero-card" style="border-color:#3d1a3c;"
+      aria-label="Información principal de Sofía Valenzuela">
+      <div class="profile-avatar-large" style="border-color:var(--neon-pink); box-shadow:0 0 20px rgba(255,0,119,0.4);">
+        <!-- Avatar estilizado en CSS/SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
       </div>
 
-      <!-- INTERACCIÓN DINÁMICA PROPIA: CONSOLA DE BENCHMARKING DE DATOS -->
-      <section class="profile-interactive-panel" style="border-color:var(--neon-pink); box-shadow:0 0 25px rgba(255,0,119,0.15);" aria-labelledby="interactive-heading-p2">
-        <h2 class="interactive-title" id="interactive-heading-p2" style="color:var(--neon-pink);">
-          ★ INTERACCIÓN PROPIA: ARCADE QUERY & API BENCHMARKER ★
-        </h2>
-        <p class="interactive-desc">
-          Sofía diseñó este simulador de latencia para evaluar la velocidad de respuesta de las consultas del arcade:
-        </p>
-
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.2rem;">
-          <button class="btn-arcade btn-pink" id="p2-btn-query" type="button">
-            EJECUTAR QUERY DE PRUEBA
-          </button>
-          <div style="font-family:var(--font-arcade); font-size:0.75rem; color:var(--neon-yellow);">
-            LATENCIA: <span id="p2-ping-val" style="color:var(--neon-green);">-- ms</span>
+      <div class="profile-bio-info">
+        <div class="tag-p2"
+          style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
+          PERSONAJE 2 [BACKEND ARCHITECT]
+        </div>
+        <h1>Sofía Valenzuela</h1>
+        <div class="profile-role-title" style="color:var(--neon-pink);">Database Wizard & API Crafter</div>
+        <div class="profile-stats-pill-row">
+          <div class="profile-badge">
+            <span>📍 Ciudad:</span>
+            <strong>Santiago</strong>
+          </div>
+          <div class="profile-badge">
+            <span>🎂 Edad:</span>
+            <strong>24 años</strong>
+          </div>
+          <div class="profile-badge">
+            <span>🛡️ Especialidad:</span>
+            <strong>Bases de Datos & APIs</strong>
           </div>
         </div>
+      </div>
 
-        <pre id="p2-response-log" style="background:#060810; border:2px solid #283359; border-radius:8px; padding:1.2rem; font-family:'Courier New', monospace; font-size:0.85rem; color:var(--text-muted); overflow-x:auto;">
+      <div>
+        <button class="btn-arcade btn-coin btn-insert-coin" type="button">
+          🪙 +1 CRÉDITO
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIONES EN COLUMNAS: HABILIDADES + FAVORITOS -->
+    <div class="profile-sections-grid">
+      <!-- 4 HABILIDADES PRINCIPALES -->
+      <section class="profile-panel" aria-labelledby="skills-heading-p2">
+        <h2 class="panel-heading" id="skills-heading-p2" style="color:var(--neon-pink);">
+          <span aria-hidden="true">💾</span> HABILIDADES
+        </h2>
+
+        <ul class="skills-list skill-list-simple">
+          <li class="skill-item">Arquitectura de APIs RESTful</li>
+          <li class="skill-item">Modelado de Bases de Datos SQL</li>
+          <li class="skill-item">Lógica Asíncrona en JavaScript</li>
+          <li class="skill-item">Seguridad Web & Encriptación</li>
+        </ul>
+      </section>
+
+      <!-- FAVORITOS: 3 PELÍCULAS Y 3 DISCOS -->
+      <section class="profile-panel" aria-labelledby="favorites-heading-p2">
+        <h2 class="panel-heading" id="favorites-heading-2">PELÍCULAS FAVORITAS</h2>
+
+        <h3
+          style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
+          TRES PELÍCULAS FAVORITAS
+        </h3>
+        <div class="media-items-grid" style="margin-bottom: 1.8rem;">
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">The Matrix (1999)</div>
+              <div class="media-subtitle">Hnas. Wachowski — La filosofía del código binario y la simulación virtual.
+              </div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">WarGames (1983)</div>
+              <div class="media-subtitle">Dir. John Badham — Modems acústicos, pantallas de fósforo y lógica de red.
+              </div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Hackers (1995)</div>
+              <div class="media-subtitle">Dir. Iain Softley — Cultura cyber-punk noventera y comandos de terminal.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="profile-panel" aria-labelledby="discos-heading-2">
+        <h2 class="panel-heading" id="discos-heading-2">DISCOS FAVORITOS</h2>
+        <div class="media-items-grid">
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">The Fat of the Land (1997)</div>
+              <div class="media-subtitle">The Prodigy — Beats pesados y energía electrónica cruda para sesiones de
+                debug.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Homework (1997)</div>
+              <div class="media-subtitle">Daft Punk — Ritmos de sintetizadores repetitivos y precisos como un reloj de
+                CPU.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Computer World (1981)</div>
+              <div class="media-subtitle">Kraftwerk — Los padres de la música electrónica computarizada.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- INTERACCIÓN DINÁMICA PROPIA: CONSOLA DE BENCHMARKING DE DATOS -->
+    <section class="profile-interactive-panel"
+      style="border-color:var(--neon-pink); box-shadow:0 0 25px rgba(255,0,119,0.15);"
+      aria-labelledby="interactive-heading-p2">
+      <h2 class="interactive-title" id="interactive-heading-p2" style="color:var(--neon-pink);">
+        ★ INTERACCIÓN PROPIA: ARCADE QUERY & API BENCHMARKER ★
+      </h2>
+      <p class="interactive-desc">
+        Sofía diseñó este simulador de latencia para evaluar la velocidad de respuesta de las consultas del arcade:
+      </p>
+
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.2rem;">
+        <button class="btn-arcade btn-pink" id="p2-btn-query" type="button">
+          EJECUTAR QUERY DE PRUEBA
+        </button>
+        <div style="font-family:var(--font-arcade); font-size:0.75rem; color:var(--neon-yellow);">
+          LATENCIA: <span id="p2-ping-val" style="color:var(--neon-green);">-- ms</span>
+        </div>
+      </div>
+
+      <pre id="p2-response-log"
+        style="background:#060810; border:2px solid #283359; border-radius:8px; padding:1.2rem; font-family:'Courier New', monospace; font-size:0.85rem; color:var(--text-muted); overflow-x:auto;">
 // Presiona el botón para disparar una petición simulada con latencia calculada dinámicamente...
         </pre>
-      </section>
+    </section>
 
-      <!-- NAVEGADOR ENTRE PERSONAJES -->
-      <nav class="profile-switcher" aria-label="Navegación entre perfiles">
-        <a href="perfil-integrante-1.html" class="btn-arcade btn-cyan">
-          ← ANTERIOR: ALEX (P1)
-        </a>
-        <a href="perfil-integrante-3.html" class="btn-arcade btn-coin">
-          SIGUIENTE: MATEO (P3) →
-        </a>
-      </nav>
-    </main>
+    <!-- NAVEGADOR ENTRE PERSONAJES -->
+    <nav class="profile-switcher" aria-label="Navegación entre perfiles">
+      <a href="perfil-integrante-1.html" class="btn-arcade btn-cyan">
+        ← ANTERIOR: ALEX (P1)
+      </a>
+      <a href="perfil-integrante-3.html" class="btn-arcade btn-coin">
+        SIGUIENTE: MATEO (P3) →
+      </a>
+    </nav>
+  </main>
 
-    <footer class="arcade-footer">
-      <div class="container">
-        <div class="footer-bottom">
-          <p>© 2026 Tu Máquina Retro Dev — Perfil Personaje 2 (Sofía Valenzuela).</p>
-        </div>
+  <footer class="arcade-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tu Máquina Retro Dev — Perfil Personaje 2 (Sofía Valenzuela).</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/common.js"></script>
+  <script src="js/profile-2.js"></script>
+</body>
+
 </html>

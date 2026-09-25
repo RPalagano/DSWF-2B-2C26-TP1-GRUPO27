@@ -1,228 +1,301 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Ramírez (P1) — Tu Máquina Retro Dev</title>
-    <meta name="description" content="Perfil de Alex Ramírez: Desarrollador Frontend y especialista en estéticas retro en Tu Máquina Retro Dev." />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body class="scanlines-active">
-    <!-- HEADER HUD ARCADE -->
-    <header class="arcade-header">
-      <div class="header-top-hud">
-        <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value">P1 / ALEX RAMÍREZ</span></div>
-        <div class="hud-item"><span>ROL:</span> <span class="hud-value">FRONTEND CRAFTER</span></div>
-        <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
-      </div>
 
-      <div class="header-main-nav container">
-        <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
-          <div class="brand-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z"/></svg>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">TU MÁQUINA RETRO DEV</span>
-            <span class="brand-subtitle">Perfil Personaje 1</span>
-          </div>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Ramírez (P1) — Tu Máquina Retro Dev</title>
+  <meta name="description"
+    content="Perfil de Alex Ramírez: Desarrollador Frontend y especialista en estéticas retro en Tu Máquina Retro Dev." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
 
-        <nav aria-label="Navegación principal">
-          <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
-          <ul class="nav-menu" id="nav-menu-list"><li><a href="index.html" class="nav-link">PORTADA</a></li><li class="nav-dropdown"><button class="nav-link dropdown-toggle active" type="button" aria-expanded="false" aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button><ul class="dropdown-menu" id="character-menu"><li><a href="perfil-integrante-1.html" class="nav-link active">PERSONAJE 1</a></li><li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li><li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li><li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li></ul></li><li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li></ul>
-        </nav>
+<body class="scanlines-active">
+  <!-- HEADER HUD ARCADE -->
+  <header class="arcade-header">
+    <div class="header-top-hud">
+      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value">P1 / ALEX RAMÍREZ</span></div>
+      <div class="hud-item"><span>ROL:</span> <span class="hud-value">FRONTEND CRAFTER</span></div>
+      <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
+    </div>
 
-        <div class="header-actions">
-          <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
-          <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
-        </div>
-      </div>
-    </header>
-
-    <main class="container profile-page-header">
-      <!-- BOTÓN VOLVER A LA PORTADA -->
-      <div class="back-navigation">
-        <a href="index.html" class="btn-back">
-          ← VOLVER A LA MÁQUINA ARCADE
-        </a>
-      </div>
-
-      <!-- TARJETA PRINCIPAL DEL PERSONAJE 1 -->
-      <section class="profile-hero-card" aria-label="Información principal de Alex Ramírez">
-        <div class="profile-avatar-large">
-          <!-- Avatar estilizado en CSS/SVG -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2">
-            <circle cx="12" cy="8" r="5"></circle>
-            <path d="M20 21a8 8 0 1 0-16 0"></path>
+    <div class="header-main-nav container">
+      <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z" />
           </svg>
         </div>
-
-        <div class="profile-bio-info">
-          <div class="tag-p1" style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
-            PERSONAJE 1 [FRONTEND MASTER]
-          </div>
-          <h1>Alex Ramírez</h1>
-          <div class="profile-role-title">Pixel Crafter & UI Specialist</div>
-          <div class="profile-stats-pill-row">
-            <div class="profile-badge">
-              <span>📍 Ciudad:</span>
-              <strong>Buenos Aires</strong>
-            </div>
-            <div class="profile-badge">
-              <span>🎂 Edad:</span>
-              <strong>22 años</strong>
-            </div>
-            <div class="profile-badge">
-              <span>⚔️ Especialidad:</span>
-              <strong>Interfaces & Responsive</strong>
-            </div>
-          </div>
+        <div class="brand-text">
+          <span class="brand-title">TU MÁQUINA RETRO DEV</span>
+          <span class="brand-subtitle">Perfil Personaje 1</span>
         </div>
+      </a>
 
-        <div>
-          <button class="btn-arcade btn-coin btn-insert-coin" type="button">
-            🪙 +1 CRÉDITO
-          </button>
-        </div>
-      </section>
+      <nav aria-label="Navegación principal">
+        <button class="mobile-menu-btn" id="btn-mobile-menu" type="button" aria-label="Abrir menú de navegación"
+          aria-expanded="false">☰</button>
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html" class="nav-link">PORTADA</a></li>
+          <li class="nav-dropdown"><button class="nav-link dropdown-toggle active" type="button" aria-expanded="false"
+              aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button>
+            <ul class="dropdown-menu" id="character-menu">
+              <li><a href="perfil-integrante-1.html" class="nav-link active">PERSONAJE 1</a></li>
+              <li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li>
+              <li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li>
+              <li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li>
+            </ul>
+          </li>
+          <li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li>
+        </ul>
+      </nav>
 
-      <!-- SECCIONES EN COLUMNAS: HABILIDADES + FAVORITOS -->
-      <div class="profile-sections-grid">
-        <!-- 4 HABILIDADES PRINCIPALES -->
-        <section class="profile-panel" aria-labelledby="skills-heading">
-          <h2 class="panel-heading" id="skills-heading">
-            <span aria-hidden="true">⚡</span> HABILIDADES</h2>
+      <div class="header-actions">
+        <button class="arcade-tool-btn" id="toggle-sound-btn">🔊 AUDIO ON</button>
+        <button class="arcade-tool-btn active" id="toggle-scanlines-btn">SCANLINES</button>
+      </div>
+    </div>
+  </header>
 
-          <ul class="skills-list skill-list-simple"><li class="skill-item">HTML5 & CSS3 Semántico</li><li class="skill-item">JavaScript Vanilla & DOM Scripting</li><li class="skill-item">Diseño UI/UX Retro & Responsive</li><li class="skill-item">Animaciones CSS & Rendimiento</li></ul></section>
+  <main class="container profile-page-header">
+    <!-- BOTÓN VOLVER A LA PORTADA -->
+    <div class="back-navigation">
+      <a href="index.html" class="btn-back">
+        ← VOLVER A LA MÁQUINA ARCADE
+      </a>
+    </div>
 
-        <!-- FAVORITOS: 3 PELÍCULAS Y 3 DISCOS -->
-        <section class="profile-panel" aria-labelledby="favorites-heading">
-          <h2 class="panel-heading" id="favorites-heading-1">PELÍCULAS FAVORITAS</h2>
-
-          <h3 style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
-            TRES PELÍCULAS FAVORITAS
-          </h3>
-          <div class="media-items-grid" style="margin-bottom: 1.8rem;">
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Tron (1982)</div>
-                <div class="media-subtitle">Dir. Steven Lisberger — La estética visual precursora del ciberespacio.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Blade Runner (1982)</div>
-                <div class="media-subtitle">Dir. Ridley Scott — Luces de neón y atmósferas retrofuturistas.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Scott Pilgrim vs. The World (2010)</div>
-                <div class="media-subtitle">Dir. Edgar Wright — Referencias directas a videojuegos de 8 y 16 bits.</div>
-              </div>
-            </div>
-          </div></section><section class="profile-panel" aria-labelledby="discos-heading-1"><h2 class="panel-heading" id="discos-heading-1">DISCOS FAVORITOS</h2>
-          <div class="media-items-grid">
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Random Access Memories (2013)</div>
-                <div class="media-subtitle">Daft Punk — Fusión analógica y futurista inolvidable.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Endless Fantasy (2013)</div>
-                <div class="media-subtitle">Anamanaguchi — Chiptune energético con guitarras pop-punk.</div>
-              </div>
-            </div>
-
-            <div class="media-card">
-              <div class="media-icon" style="color: var(--neon-yellow);">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg>
-              </div>
-              <div class="media-details">
-                <div class="media-title">Discovery (2001)</div>
-                <div class="media-subtitle">Daft Punk — Pistas electrónicas clásicas de la era dorada.</div>
-              </div>
-            </div>
-          </div>
-        </section>
+    <!-- TARJETA PRINCIPAL DEL PERSONAJE 1 -->
+    <section class="profile-hero-card" aria-label="Información principal de Alex Ramírez">
+      <div class="profile-avatar-large">
+        <!-- Avatar estilizado en CSS/SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-cyan)" stroke-width="2">
+          <circle cx="12" cy="8" r="5"></circle>
+          <path d="M20 21a8 8 0 1 0-16 0"></path>
+        </svg>
       </div>
 
-      <!-- INTERACCIÓN DINÁMICA PROPIA: SIMULADOR DE PALETAS RETRO -->
-      <section class="profile-interactive-panel" aria-labelledby="interactive-heading">
-        <h2 class="interactive-title" id="interactive-heading">
-          ★ INTERACCIÓN PROPIA: SIMULADOR DE PALETAS RETRO CSS ★
-        </h2>
-        <p class="interactive-desc">
-          Elige una paleta y observa cómo cambian los colores de la vista previa y sus variables CSS.
-        </p>
-
-        <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1.5rem;">
-          <button class="btn-arcade btn-cyan btn-palette-option active" data-palette="arcade" type="button">
-            ARCADE NEON (DEFAULT)
-          </button>
-          <button class="btn-arcade btn-outline btn-palette-option" data-palette="gameboy" type="button">
-            GAME BOY VERDE (1989)
-          </button>
-          <button class="btn-arcade btn-outline btn-palette-option" data-palette="cga" type="button">
-            CGA RETRO (1981)
-          </button>
-          <button class="btn-arcade btn-outline btn-palette-option" data-palette="cyberpunk" type="button">
-            CYBERPUNK HIGH CONTRAST
-          </button>
+      <div class="profile-bio-info">
+        <div class="tag-p1"
+          style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
+          PERSONAJE 1 [FRONTEND MASTER]
         </div>
-
-        <div id="p1-palette-preview" style="background:#0b0d18; border:2px dashed var(--neon-cyan); border-radius:8px; padding:1.5rem; transition:all 0.3s ease;">
-          <div style="font-family:var(--font-arcade); font-size:0.85rem; margin-bottom:0.5rem;">
-            VISTA PREVIA DEL COMPONENTE EN TIEMPO REAL
+        <h1>Alex Ramírez</h1>
+        <div class="profile-role-title">Pixel Crafter & UI Specialist</div>
+        <div class="profile-stats-pill-row">
+          <div class="profile-badge">
+            <span>📍 Ciudad:</span>
+            <strong>Buenos Aires</strong>
           </div>
-          <p style="font-size:0.95rem; margin-bottom:0.8rem;">
-            La vista previa y los valores CSS muestran la paleta elegida.
-          </p>
-          <code id="palette-css-var" style="display:block; background:#000; padding:0.6rem 1rem; border-radius:4px; font-family:monospace; color:var(--neon-green);">
+          <div class="profile-badge">
+            <span>🎂 Edad:</span>
+            <strong>22 años</strong>
+          </div>
+          <div class="profile-badge">
+            <span>⚔️ Especialidad:</span>
+            <strong>Interfaces & Responsive</strong>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="btn-arcade btn-coin btn-insert-coin" type="button">
+          🪙 +1 CRÉDITO
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIONES EN COLUMNAS: HABILIDADES + FAVORITOS -->
+    <div class="profile-sections-grid">
+      <!-- 4 HABILIDADES PRINCIPALES -->
+      <section class="profile-panel" aria-labelledby="skills-heading">
+        <h2 class="panel-heading" id="skills-heading">
+          <span aria-hidden="true">⚡</span> HABILIDADES
+        </h2>
+
+        <ul class="skills-list skill-list-simple">
+          <li class="skill-item">HTML5 & CSS3 Semántico</li>
+          <li class="skill-item">JavaScript Vanilla & DOM Scripting</li>
+          <li class="skill-item">Diseño UI/UX Retro & Responsive</li>
+          <li class="skill-item">Animaciones CSS & Rendimiento</li>
+        </ul>
+      </section>
+
+      <!-- FAVORITOS: 3 PELÍCULAS Y 3 DISCOS -->
+      <section class="profile-panel" aria-labelledby="favorites-heading">
+        <h2 class="panel-heading" id="favorites-heading-1">PELÍCULAS FAVORITAS</h2>
+
+        <h3
+          style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
+          TRES PELÍCULAS FAVORITAS
+        </h3>
+        <div class="media-items-grid" style="margin-bottom: 1.8rem;">
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Tron (1982)</div>
+              <div class="media-subtitle">Dir. Steven Lisberger — La estética visual precursora del ciberespacio.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Blade Runner (1982)</div>
+              <div class="media-subtitle">Dir. Ridley Scott — Luces de neón y atmósferas retrofuturistas.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Scott Pilgrim vs. The World (2010)</div>
+              <div class="media-subtitle">Dir. Edgar Wright — Referencias directas a videojuegos de 8 y 16 bits.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="profile-panel" aria-labelledby="discos-heading-1">
+        <h2 class="panel-heading" id="discos-heading-1">DISCOS FAVORITOS</h2>
+        <div class="media-items-grid">
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Random Access Memories (2013)</div>
+              <div class="media-subtitle">Daft Punk — Fusión analógica y futurista inolvidable.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Endless Fantasy (2013)</div>
+              <div class="media-subtitle">Anamanaguchi — Chiptune energético con guitarras pop-punk.</div>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-icon" style="color: var(--neon-yellow);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <div class="media-details">
+              <div class="media-title">Discovery (2001)</div>
+              <div class="media-subtitle">Daft Punk — Pistas electrónicas clásicas de la era dorada.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- INTERACCIÓN DINÁMICA PROPIA: SIMULADOR DE PALETAS RETRO -->
+    <section class="profile-interactive-panel" aria-labelledby="interactive-heading">
+      <h2 class="interactive-title" id="interactive-heading">
+        ★ INTERACCIÓN PROPIA: SIMULADOR DE PALETAS RETRO CSS ★
+      </h2>
+      <p class="interactive-desc">
+        Elige una paleta y observa cómo cambian los colores de la vista previa y sus variables CSS.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1.5rem;">
+        <button class="btn-arcade btn-cyan btn-palette-option active" data-palette="arcade" type="button">
+          ARCADE NEON (DEFAULT)
+        </button>
+        <button class="btn-arcade btn-outline btn-palette-option" data-palette="gameboy" type="button">
+          GAME BOY VERDE (1989)
+        </button>
+        <button class="btn-arcade btn-outline btn-palette-option" data-palette="cga" type="button">
+          CGA RETRO (1981)
+        </button>
+        <button class="btn-arcade btn-outline btn-palette-option" data-palette="cyberpunk" type="button">
+          CYBERPUNK HIGH CONTRAST
+        </button>
+      </div>
+
+      <div id="p1-palette-preview"
+        style="background:#0b0d18; border:2px dashed var(--neon-cyan); border-radius:8px; padding:1.5rem; transition:all 0.3s ease;">
+        <div style="font-family:var(--font-arcade); font-size:0.85rem; margin-bottom:0.5rem;">
+          VISTA PREVIA DEL COMPONENTE EN TIEMPO REAL
+        </div>
+        <p style="font-size:0.95rem; margin-bottom:0.8rem;">
+          La vista previa y los valores CSS muestran la paleta elegida.
+        </p>
+        <code id="palette-css-var"
+          style="display:block; background:#000; padding:0.6rem 1rem; border-radius:4px; font-family:monospace; color:var(--neon-green);">
             --retro-primary: #00f0ff; --retro-bg: #0b0d17;
           </code>
-        </div>
-      </section>
-
-      <!-- NAVEGADOR ENTRE PERSONAJES -->
-      <nav class="profile-switcher" aria-label="Navegación entre perfiles">
-        <a href="index.html" class="btn-arcade btn-outline">
-          ← PORTADA ARCADE
-        </a>
-        <a href="perfil-integrante-2.html" class="btn-arcade btn-pink">
-          SIGUIENTE: SOFÍA (P2) →
-        </a>
-      </nav>
-    </main>
-
-    <footer class="arcade-footer">
-      <div class="container">
-        <div class="footer-bottom">
-          <p>© 2026 Tu Máquina Retro Dev — Perfil Personaje 1 (Alex Ramírez).</p>
-        </div>
       </div>
-    </footer>
+    </section>
 
-    <script src="js/script.js"></script>
-  </body>
+    <!-- NAVEGADOR ENTRE PERSONAJES -->
+    <nav class="profile-switcher" aria-label="Navegación entre perfiles">
+      <a href="index.html" class="btn-arcade btn-outline">
+        ← PORTADA ARCADE
+      </a>
+      <a href="perfil-integrante-2.html" class="btn-arcade btn-pink">
+        SIGUIENTE: SOFÍA (P2) →
+      </a>
+    </nav>
+  </main>
+
+  <footer class="arcade-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Tu Máquina Retro Dev — Perfil Personaje 1 (Alex Ramírez).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/profile-1.js"></script>
+</body>
+
 </html>
