@@ -93,6 +93,12 @@ h1, h2, h3, .arcade-font {
   letter-spacing: 0.5px;
 }
 
+.section-title {
+  margin-bottom: 0.8rem;
+  color: #fff;
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+}
+
 /* Contenedor general centrado */
 .container {
   width: 100%;
@@ -380,227 +386,62 @@ h1, h2, h3, .arcade-font {
 }
 
 /* ==========================================================================
-   MARQUESINA Y HERO (PORTADA / INDEX)
+   FOOTER ARCADE
    ========================================================================== */
-.hero-arcade {
-  padding: 3.5rem 0 2.5rem;
-  position: relative;
-  overflow: hidden;
+.arcade-footer {
+  margin-top: auto;
+  background: #080a12;
+  border-top: 3px solid #1a2035;
+  padding: 3rem 0 2rem;
+  color: var(--text-muted);
 }
 
-/* Marco exterior de la cabina arcade */
-.arcade-cabinet-frame {
-  background: #0f1324;
-  border: 4px solid #232b49;
-  border-top: 8px solid var(--neon-pink);
-  border-radius: 12px;
-  padding: 2.5rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8),
-              inset 0 0 40px rgba(0, 0, 0, 0.6),
-              0 0 30px rgba(255, 0, 119, 0.15);
-  position: relative;
-}
-
-/* Tornillos decorativos de la cabina */
-.arcade-cabinet-frame::before,
-.arcade-cabinet-frame::after {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: #2a3459;
-  border-radius: 50%;
-  border: 1px solid #4d5d99;
-}
-.arcade-cabinet-frame::before { top: 12px; left: 16px; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
-.arcade-cabinet-frame::after { top: 12px; right: 16px; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
-
-.hero-grid {
+.footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 2.5rem;
-  align-items: center;
+  margin-bottom: 2.5rem;
 }
 
-.hero-badge-arcade {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: #1c1833;
-  border: 1px solid var(--neon-pink);
-  color: var(--neon-pink);
-  font-family: var(--font-arcade);
-  font-size: 0.68rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  margin-bottom: 1.2rem;
-  animation: pulseNeon 2s infinite ease-in-out;
-}
-
-@keyframes pulseNeon {
-  0%, 100% { box-shadow: 0 0 6px rgba(255, 0, 119, 0.3); }
-  50% { box-shadow: 0 0 16px rgba(255, 0, 119, 0.7); }
-}
-
-.hero-title {
-  font-size: clamp(1.4rem, 4vw, 2.3rem);
-  color: #ffffff;
-  margin-bottom: 1.2rem;
-  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
-  line-height: 1.35;
-}
-
-.hero-title span {
-  color: var(--neon-yellow);
-}
-
-.hero-description {
-  font-size: 1.15rem;
-  color: var(--text-muted);
-  margin-bottom: 1.8rem;
-  font-weight: 500;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* Mini estadísticas del gabinete */
-.hero-specs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  border-top: 1px solid var(--border-arcade);
-  padding-top: 1.2rem;
-}
-
-.spec-box {
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.6rem;
-  border-radius: 6px;
-  border-left: 3px solid var(--neon-cyan);
-}
-
-.spec-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-.spec-value {
-  font-family: var(--font-arcade);
-  font-size: 0.8rem;
-  color: var(--neon-cyan);
-}
-
-/* ==========================================================================
-   MAQUETA VISUAL DEL GABINETE ARCADE (CSS Puro)
-   ========================================================================== */
-.arcade-screen-mockup {
-  background: #080a14;
-  border: 4px solid #1f2742;
-  border-radius: 12px;
-  padding: 1.5rem;
-  position: relative;
-  box-shadow: inset 0 0 25px rgba(0, 240, 255, 0.2);
-}
-
-.screen-crt-inner {
-  background: #06070e;
-  border: 2px solid #00f0ff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-}
-
-.screen-marquee {
-  text-align: center;
-  border-bottom: 2px dashed #283359;
-  padding-bottom: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.marquee-text {
-  font-family: var(--font-arcade);
-  font-size: 0.75rem;
-  color: var(--neon-yellow);
-  animation: blinkMarquee 1s step-end infinite;
-}
-
-@keyframes blinkMarquee {
-  50% { opacity: 0.2; }
-}
-
-.screen-player-preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.8rem;
-}
-
-.pixel-avatar-frame {
-  width: 110px;
-  height: 110px;
-  background: #171b30;
-  border: 3px solid var(--neon-pink);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 15px rgba(255, 0, 119, 0.4);
-  position: relative;
-}
-
-.pixel-avatar-frame svg {
-  width: 70px;
-  height: 70px;
-}
-
-.preview-name {
+.footer-brand h4 {
   font-family: var(--font-arcade);
   font-size: 0.85rem;
   color: #fff;
+  margin-bottom: 0.8rem;
 }
 
-.preview-role {
-  color: var(--neon-cyan);
-  font-size: 0.9rem;
-  font-weight: 600;
+.footer-brand p {
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
-.coin-door {
-  margin-top: 1.2rem;
-  background: #0d101e;
-  border: 2px solid #232a48;
-  border-radius: 6px;
-  padding: 0.8rem;
+.footer-col h5 {
+  font-family: var(--font-arcade);
+  font-size: 0.72rem;
+  color: var(--neon-yellow);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.coin-slot {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0.6rem;
 }
 
-.coin-slit {
-  width: 4px;
-  height: 24px;
-  background: #ff5500;
-  box-shadow: 0 0 8px #ff5500;
-  border-radius: 2px;
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-.coin-status-text {
-  font-family: var(--font-arcade);
-  font-size: 0.65rem;
-  color: var(--neon-yellow);
+.footer-links a:hover {
+  color: var(--neon-cyan);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #171d30;
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #6d7899;
 }
