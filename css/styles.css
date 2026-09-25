@@ -1,63 +1,606 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Fuentes de Google: 'Press Start 2P' (Títulos arcade) y 'Chakra Petch' (Lectura retro-tecnológica clara) */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,400&family=Press+Start+2P&display=swap');
+
+:root {
+  /* Paleta de Colores Arcade */
+  --bg-cabinet: #0b0d17;
+  --bg-screen: #111424;
+  --bg-card: #181d33;
+  --bg-card-hover: #222947;
+  --bg-panel: #141829;
+  
+  --neon-cyan: #00f0ff;
+  --neon-pink: #ff0077;
+  --neon-yellow: #ffe600;
+  --neon-green: #39ff14;
+  --neon-purple: #b026ff;
+  
+  --text-main: #f0f4fc;
+  --text-muted: #9aa5c4;
+  --text-dark: #0b0d17;
+  
+  --border-arcade: #2e385c;
+  --border-glow: rgba(0, 240, 255, 0.4);
+  
+  /* Sombras y Luces */
+  --glow-cyan: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+  --glow-pink: 0 0 10px rgba(255, 0, 119, 0.6), 0 0 20px rgba(255, 0, 119, 0.3);
+  --glow-yellow: 0 0 10px rgba(255, 230, 0, 0.6), 0 0 20px rgba(255, 230, 0, 0.3);
+
+  /* Tipografías */
+  --font-arcade: 'Press Start 2P', monospace, cursive;
+  --font-text: 'Chakra Petch', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Dimensiones y espaciados */
+  --header-height: 74px;
+  --container-max: 1200px;
+}
+
+/* Reset básico y normalización */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 100vh;
+  background-color: var(--bg-cabinet);
+  color: var(--text-main);
+  font-family: var(--font-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 25px;
+/* Efecto de Scanlines sutil sobre la pantalla */
+body.scanlines-active::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 999;
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  opacity: 0.85;
 }
 
-header h1 {
-    font-size: 32px;
+/* Enlaces universales */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.participantes {
-    min-height: calc(100vh - 88px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    padding: 40px;
-    flex-wrap: wrap;
+a:hover {
+  color: var(--neon-yellow);
+  text-shadow: var(--glow-yellow);
 }
 
-.card {
-    width: 200px;
-    min-height: 180px;
-    background-color: white;
-    border-radius: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    text-align: center;
+/* Tipografía de títulos arcade */
+h1, h2, h3, .arcade-font {
+  font-family: var(--font-arcade);
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
-.card h2 {
-    font-size: 20px;
+/* Contenedor general centrado */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.card a {
-    text-decoration: none;
-    background-color: #222;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 5px;
+/* ==========================================================================
+   HEADER Y NAVEGACIÓN ARCADE
+   ========================================================================== */
+.arcade-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 13, 23, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 3px solid var(--border-arcade);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.card a:hover {
-    background-color: #444;
+/* Tira superior de estado: High Score, Créditos, etc. */
+.header-top-hud {
+  background: #06070d;
+  border-bottom: 1px solid #1e243a;
+  padding: 0.35rem 1.5rem;
+  font-family: var(--font-arcade);
+  font-size: 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--neon-yellow);
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-value {
+  color: var(--neon-green);
+}
+
+.header-main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 1.5rem;
+}
+
+/* Logo con Marquesina Retro */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--neon-yellow);
+  box-shadow: 0 0 10px rgba(255, 0, 119, 0.5);
+  transform: rotate(-3deg);
+  border-radius: 4px;
+}
+
+.brand-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-arcade);
+  font-size: 0.85rem;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: var(--neon-cyan);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Links de navegación */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-arcade);
+  font-size: 0.72rem;
+  color: var(--text-main);
+  padding: 0.5rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  background: rgba(255, 230, 0, 0.08);
+  box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
+}
+
+.nav-dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropdown-toggle {
+  background: transparent;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 120;
+  min-width: 190px;
+  padding: 0.5rem;
+  list-style: none;
+  background: #0b0e1b;
+  border: 1px solid var(--neon-cyan);
+  border-radius: 4px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.7);
+}
+
+.nav-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .nav-link {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Menú botón de audio / scanlines */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.arcade-tool-btn {
+  background: #191f38;
+  border: 1px solid var(--border-arcade);
+  color: var(--text-muted);
+  font-family: var(--font-arcade);
+  font-size: 0.6rem;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.arcade-tool-btn:hover {
+  color: #fff;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+.arcade-tool-btn.active {
+  color: var(--neon-green);
+  border-color: var(--neon-green);
+  background: rgba(57, 255, 20, 0.1);
+}
+
+/* Botón Hamburguesa móvil */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   BOTONES ESTILO MÁQUINA ARCADE
+   ========================================================================== */
+.btn-arcade {
+  font-family: var(--font-arcade);
+  font-size: 0.75rem;
+  padding: 0.9rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.btn-arcade:active {
+  transform: translateY(3px);
+}
+
+/* Botón Primario: Moneda / Insert Coin */
+.btn-coin {
+  background: linear-gradient(180deg, #ffe600 0%, #d4a000 100%);
+  color: #0b0d17;
+  border-bottom: 4px solid #8f6c00;
+  box-shadow: 0 4px 15px rgba(255, 230, 0, 0.4);
+}
+
+.btn-coin:hover {
+  background: linear-gradient(180deg, #fff04d 0%, #e6b000 100%);
+  box-shadow: 0 0 20px rgba(255, 230, 0, 0.7);
+  color: #000;
+}
+
+/* Botón Secundario: Cyan */
+.btn-cyan {
+  background: linear-gradient(180deg, #00f0ff 0%, #009db3 100%);
+  color: #0b0d17;
+  border-bottom: 4px solid #005c69;
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.35);
+}
+
+.btn-cyan:hover {
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
+}
+
+/* Botón Rosa / Magenta */
+.btn-pink {
+  background: linear-gradient(180deg, #ff0077 0%, #ba0057 100%);
+  color: #fff;
+  border-bottom: 4px solid #6b0032;
+  box-shadow: 0 4px 15px rgba(255, 0, 119, 0.35);
+}
+
+.btn-pink:hover {
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 0, 119, 0.7);
+}
+
+/* Botón Borde / Outline */
+.btn-outline {
+  background: transparent;
+  color: var(--neon-cyan);
+  border: 2px solid var(--neon-cyan);
+  border-bottom: 4px solid var(--neon-cyan);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 240, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* ==========================================================================
+   MARQUESINA Y HERO (PORTADA / INDEX)
+   ========================================================================== */
+.hero-arcade {
+  padding: 3.5rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Marco exterior de la cabina arcade */
+.arcade-cabinet-frame {
+  background: #0f1324;
+  border: 4px solid #232b49;
+  border-top: 8px solid var(--neon-pink);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8),
+              inset 0 0 40px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(255, 0, 119, 0.15);
+  position: relative;
+}
+
+/* Tornillos decorativos de la cabina */
+.arcade-cabinet-frame::before,
+.arcade-cabinet-frame::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #2a3459;
+  border-radius: 50%;
+  border: 1px solid #4d5d99;
+}
+.arcade-cabinet-frame::before { top: 12px; left: 16px; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
+.arcade-cabinet-frame::after { top: 12px; right: 16px; box-shadow: 0 4px 0 rgba(0,0,0,0.5); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-badge-arcade {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #1c1833;
+  border: 1px solid var(--neon-pink);
+  color: var(--neon-pink);
+  font-family: var(--font-arcade);
+  font-size: 0.68rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  animation: pulseNeon 2s infinite ease-in-out;
+}
+
+@keyframes pulseNeon {
+  0%, 100% { box-shadow: 0 0 6px rgba(255, 0, 119, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(255, 0, 119, 0.7); }
+}
+
+.hero-title {
+  font-size: clamp(1.4rem, 4vw, 2.3rem);
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+  line-height: 1.35;
+}
+
+.hero-title span {
+  color: var(--neon-yellow);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Mini estadísticas del gabinete */
+.hero-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--border-arcade);
+  padding-top: 1.2rem;
+}
+
+.spec-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.6rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--neon-cyan);
+}
+
+.spec-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.spec-value {
+  font-family: var(--font-arcade);
+  font-size: 0.8rem;
+  color: var(--neon-cyan);
+}
+
+/* ==========================================================================
+   MAQUETA VISUAL DEL GABINETE ARCADE (CSS Puro)
+   ========================================================================== */
+.arcade-screen-mockup {
+  background: #080a14;
+  border: 4px solid #1f2742;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: inset 0 0 25px rgba(0, 240, 255, 0.2);
+}
+
+.screen-crt-inner {
+  background: #06070e;
+  border: 2px solid #00f0ff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.screen-marquee {
+  text-align: center;
+  border-bottom: 2px dashed #283359;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.marquee-text {
+  font-family: var(--font-arcade);
+  font-size: 0.75rem;
+  color: var(--neon-yellow);
+  animation: blinkMarquee 1s step-end infinite;
+}
+
+@keyframes blinkMarquee {
+  50% { opacity: 0.2; }
+}
+
+.screen-player-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.pixel-avatar-frame {
+  width: 110px;
+  height: 110px;
+  background: #171b30;
+  border: 3px solid var(--neon-pink);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 0, 119, 0.4);
+  position: relative;
+}
+
+.pixel-avatar-frame svg {
+  width: 70px;
+  height: 70px;
+}
+
+.preview-name {
+  font-family: var(--font-arcade);
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.preview-role {
+  color: var(--neon-cyan);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.coin-door {
+  margin-top: 1.2rem;
+  background: #0d101e;
+  border: 2px solid #232a48;
+  border-radius: 6px;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coin-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.coin-slit {
+  width: 4px;
+  height: 24px;
+  background: #ff5500;
+  box-shadow: 0 0 8px #ff5500;
+  border-radius: 2px;
+}
+
+.coin-status-text {
+  font-family: var(--font-arcade);
+  font-size: 0.65rem;
+  color: var(--neon-yellow);
 }
