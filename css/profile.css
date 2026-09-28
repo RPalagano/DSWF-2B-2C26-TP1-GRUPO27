@@ -315,3 +315,21 @@
   margin-bottom: 4rem;
 }
 
+
+/* Imágenes de películas y grupos en las tarjetas de David */
+.media-image {
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid #33406b;
+  border-radius: 6px;
+}
+
+.media-image-poster {
+  width: 58px;
+  height: 82px;
+}
+
+.media-image-band {
+  width: 64px;
+  height: 64px;
+}
