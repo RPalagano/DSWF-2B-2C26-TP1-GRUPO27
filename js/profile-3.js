@@ -1,20 +1,20 @@
 function initProfile3Page() {
-  const testBox = document.getElementById('p3-reflex-box');
-  const statusText = document.getElementById('p3-reflex-status');
-  const resultText = document.getElementById('p3-reflex-result');
-  if (!testBox || !statusText) return;
+  const demoBox = document.getElementById('p3-ui-demo-box');
+  const statusText = document.getElementById('p3-ui-demo-status');
+  const resultText = document.getElementById('p3-ui-demo-result');
+  if (!demoBox || !statusText) return;
 
   let state = 'idle'; // 'idle' | 'waiting' | 'ready'
   let startTime = 0;
   let timeoutId = null;
 
-  testBox.addEventListener('click', () => {
+  demoBox.addEventListener('click', () => {
     if (state === 'idle') {
       // Iniciar prueba
       state = 'waiting';
-      testBox.style.background = '#800000';
-      testBox.style.borderColor = '#ff3333';
-      statusText.textContent = 'ESPERA AL COLOR VERDE...';
+      demoBox.style.background = '#800000';
+      demoBox.style.borderColor = '#ff3333';
+      statusText.textContent = 'ESTADO: CARGANDO...';
       if (resultText) resultText.textContent = '';
       ArcadeAudio.playSelect();
 
@@ -22,40 +22,34 @@ function initProfile3Page() {
       timeoutId = setTimeout(() => {
         state = 'ready';
         startTime = Date.now();
-        testBox.style.background = '#006622';
-        testBox.style.borderColor = 'var(--neon-green)';
-        statusText.textContent = '¡PRESIONA AHORA!';
+        demoBox.style.background = '#006622';
+        demoBox.style.borderColor = 'var(--neon-green)';
+        statusText.textContent = 'ESTADO: LISTO. HAZ CLIC PARA CONTINUAR';
       }, delay);
     } else if (state === 'waiting') {
       // Presionó antes de tiempo
       clearTimeout(timeoutId);
       state = 'idle';
-      testBox.style.background = '#1b2038';
-      testBox.style.borderColor = 'var(--border-arcade)';
-      statusText.textContent = '¡DEMASIADO PRONTO! Clic para reintentar';
+      demoBox.style.background = '#1b2038';
+      demoBox.style.borderColor = 'var(--border-arcade)';
+      statusText.textContent = 'ACCIÓN NO DISPONIBLE. CLIC PARA REINTENTAR';
     } else if (state === 'ready') {
       // Éxito
       const elapsed = Date.now() - startTime;
       state = 'idle';
-      testBox.style.background = '#1b2038';
-      testBox.style.borderColor = 'var(--neon-yellow)';
+      demoBox.style.background = '#1b2038';
+      demoBox.style.borderColor = 'var(--neon-yellow)';
       ArcadeAudio.playPowerUp();
-      statusText.textContent = '¡EXCELENTE! Clic para jugar otra vez';
-      
-      let rank = 'RANGO A';
-      if (elapsed < 230) rank = '★ RANGO S+ (VELOCIDAD MÁXIMA)';
-      else if (elapsed < 300) rank = 'RANGO S (DESARROLLADOR SENIOR)';
-      else if (elapsed < 400) rank = 'RANGO A (REFLEJOS ÓPTIMOS)';
-      else rank = 'RANGO B (BUEN INTENTO)';
+      statusText.textContent = 'INTERACCIÓN COMPLETADA. CLIC PARA REPETIR';
 
       if (resultText) {
-        resultText.innerHTML = `Tiempo de reacción: <strong style="color:var(--neon-green)">${elapsed} ms</strong> — <span style="color:var(--neon-yellow)">${rank}</span>`;
+        resultText.innerHTML = `Tiempo de respuesta: <strong style="color:var(--neon-green)">${elapsed} ms</strong>`;
       }
     }
   });
 }
 
 
-// Interacción del perfil 3: test de reflejos arcade.
+// Interacción del perfil 3: demostración de estados de interfaz.
 
 document.addEventListener('DOMContentLoaded', initProfile3Page);
