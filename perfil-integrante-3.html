@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
-<body class="scanlines-active">
+<body class="scanlines-active profile-p3">
   <!-- HEADER HUD ARCADE -->
   <header class="arcade-header">
     <div class="header-top-hud">
-      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value" style="color:var(--neon-yellow);">P3 / MATEO
+      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value p3-hud-accent">P3 / MATEO
           GÓMEZ</span></div>
       <div class="hud-item"><span>ROL:</span> <span class="hud-value">GAME LOGIC CRAFTER</span></div>
       <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
@@ -24,7 +24,7 @@
 
     <div class="header-main-nav container">
       <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
-        <div class="brand-icon" style="border-color:var(--neon-yellow);">
+        <div class="brand-icon p3-brand-accent">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z" />
@@ -70,9 +70,8 @@
     </div>
 
     <!-- TARJETA PRINCIPAL DEL PERSONAJE 3 -->
-    <section class="profile-hero-card" style="border-color:#423b18;" aria-label="Información principal de Mateo Gómez">
-      <div class="profile-avatar-large"
-        style="border-color:var(--neon-yellow); box-shadow:0 0 20px rgba(255,230,0,0.4);">
+    <section class="profile-hero-card p3-hero-accent" aria-label="Información principal de Mateo Gómez">
+      <div class="profile-avatar-large p3-avatar-accent">
         <!-- Avatar estilizado en CSS/SVG -->
         <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-yellow)" stroke-width="2">
           <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -80,12 +79,11 @@
       </div>
 
       <div class="profile-bio-info">
-        <div class="tag-p3"
-          style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
+        <div class="tag-p3 p3-role-label">
           PERSONAJE 3 [GAME LOGIC & UI]
         </div>
         <h1>Mateo Gómez</h1>
-        <div class="profile-role-title" style="color:var(--neon-yellow);">Interaction Designer & Gameplay Architect
+        <div class="profile-role-title p3-role-title">Interaction Designer & Gameplay Architect
         </div>
         <div class="profile-stats-pill-row">
           <div class="profile-badge">
@@ -114,15 +112,60 @@
     <div class="profile-sections-grid">
       <!-- 4 HABILIDADES PRINCIPALES -->
       <section class="profile-panel" aria-labelledby="skills-heading-p3">
-        <h2 class="panel-heading" id="skills-heading-p3" style="color:var(--neon-yellow);">
+        <h2 class="panel-heading p3-panel-title" id="skills-heading-p3">
           <span aria-hidden="true">🎮</span> HABILIDADES
         </h2>
 
         <div class="media-items-grid skills-cards">
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12a4 4 0 0 1 3.8 5l-1 3a2 2 0 0 1-3.2 1l-2.6-2H9l-2.6 2a2 2 0 0 1-3.2-1l-1-3A4 4 0 0 1 6 8z"></path><path d="M8 10v4m-2-2h4m6-1h.01M18 13h.01"></path></svg></div><div class="media-details"><div class="media-title">Mecánicas de videojuegos 2D</div><div class="media-subtitle">Diseño de interacciones y reglas para experiencias de juego.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"></path><circle cx="4" cy="6" r="1"></circle><circle cx="4" cy="12" r="1"></circle><circle cx="4" cy="18" r="1"></circle></svg></div><div class="media-details"><div class="media-title">Estructuras de datos en frontend</div><div class="media-subtitle">Organización de información para construir interfaces dinámicas.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"></path><circle cx="12" cy="12" r="5"></circle></svg></div><div class="media-details"><div class="media-title">Interacción y microanimaciones</div><div class="media-subtitle">Detalles visuales que responden a las acciones del usuario.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"></path><path d="M15 6h6v6"></path></svg></div><div class="media-details"><div class="media-title">Optimización de rendimiento</div><div class="media-subtitle">Mejoras para lograr animaciones fluidas y una experiencia ágil.</div></div></article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M6 8h12a4 4 0 0 1 3.8 5l-1 3a2 2 0 0 1-3.2 1l-2.6-2H9l-2.6 2a2 2 0 0 1-3.2-1l-1-3A4 4 0 0 1 6 8z">
+                </path>
+                <path d="M8 10v4m-2-2h4m6-1h.01M18 13h.01"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Mecánicas de videojuegos 2D</div>
+              <div class="media-subtitle">Diseño de interacciones y reglas para experiencias de juego.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 6h13M8 12h13M8 18h13"></path>
+                <circle cx="4" cy="6" r="1"></circle>
+                <circle cx="4" cy="12" r="1"></circle>
+                <circle cx="4" cy="18" r="1"></circle>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Estructuras de datos en frontend</div>
+              <div class="media-subtitle">Organización de información para construir interfaces dinámicas.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1">
+                </path>
+                <circle cx="12" cy="12" r="5"></circle>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Interacción y microanimaciones</div>
+              <div class="media-subtitle">Detalles visuales que responden a las acciones del usuario.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17l6-6 4 4 8-9"></path>
+                <path d="M15 6h6v6"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Optimización de rendimiento</div>
+              <div class="media-subtitle">Mejoras para lograr animaciones fluidas y una experiencia ágil.</div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -130,11 +173,10 @@
       <section class="profile-panel" aria-labelledby="favorites-heading-p3">
         <h2 class="panel-heading" id="favorites-heading-3">PELÍCULAS FAVORITAS</h2>
 
-        <h3
-          style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
+        <h3 class="p3-panel-subheading">
           TRES PELÍCULAS FAVORITAS
         </h3>
-        <div class="media-items-grid" style="margin-bottom: 1.8rem;">
+        <div class="media-items-grid p3-favorites-spacing">
           <div class="media-card">
             <div class="media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -200,7 +242,7 @@
         <h2 class="panel-heading" id="discos-heading-3">DISCOS FAVORITOS</h2>
         <div class="media-items-grid">
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p3-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -213,7 +255,7 @@
           </div>
 
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p3-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -226,7 +268,7 @@
           </div>
 
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p3-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -242,10 +284,8 @@
     </div>
 
     <!-- INTERACCIÓN DINÁMICA PROPIA: TEST DE REFLEJOS ARCADE -->
-    <section class="profile-interactive-panel"
-      style="border-color:var(--neon-yellow); box-shadow:0 0 25px rgba(255,230,0,0.15);"
-      aria-labelledby="interactive-heading-p3">
-      <h2 class="interactive-title" id="interactive-heading-p3" style="color:var(--neon-yellow);">
+    <section class="profile-interactive-panel p3-interactive-panel" aria-labelledby="interactive-heading-p3">
+      <h2 class="interactive-title p3-interactive-title" id="interactive-heading-p3">
         ★ INTERACCIÓN PROPIA: TEST DE REFLEJOS DEL PERSONAJE ★
       </h2>
       <p class="interactive-desc">
@@ -253,19 +293,16 @@
         de jugar:
       </p>
 
-      <div id="p3-reflex-box"
-        style="background:#1b2038; border:3px solid var(--border-arcade); border-radius:10px; padding:2.5rem; text-align:center; cursor:pointer; user-select:none; transition:background 0.2s, border-color 0.2s;">
-        <div id="p3-reflex-status"
-          style="font-family:var(--font-arcade); font-size:0.95rem; color:#fff; margin-bottom:0.5rem;">
+      <div id="p3-reflex-box" class="p3-reflex-box">
+        <div id="p3-reflex-status" class="p3-reflex-title">
           ▶ HAZ CLIC AQUÍ PARA INICIAR EL TEST
         </div>
-        <div style="font-size:0.85rem; color:var(--text-muted);">
+        <div class="p3-reflex-description">
           (Cuando el cuadro cambie a VERDE, haz clic lo más rápido posible)
         </div>
       </div>
 
-      <div id="p3-reflex-result"
-        style="font-family:var(--font-arcade); font-size:0.85rem; margin-top:1.2rem; text-align:center; min-height:1.5rem;">
+      <div id="p3-reflex-result" class="p3-reflex-result">
         <!-- Resultado dinámico calculado por JS -->
       </div>
     </section>
@@ -273,13 +310,10 @@
     <!-- NAVEGADOR ENTRE PERSONAJES -->
     <nav class="profile-switcher" aria-label="Navegación entre perfiles">
       <a href="perfil-integrante-2.html" class="btn-arcade btn-pink">
-        ← ANTERIOR: SOFÍA (P2)
-      </a>
-      <a href="index.html" class="btn-arcade btn-cyan">
-        VOLVER A LA PORTADA →
+        ← Anterior: Sofía
       </a>
       <a href="perfil-integrante-4.html" class="btn-arcade btn-cyan">
-        SIGUIENTE: PERSONAJE 4 →
+        Siguiente: Cande →
       </a>
     </nav>
   </main>
