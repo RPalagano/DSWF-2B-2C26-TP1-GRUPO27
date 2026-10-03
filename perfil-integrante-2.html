@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
-<body class="scanlines-active">
+<body class="scanlines-active profile-p2">
   <!-- HEADER HUD ARCADE -->
   <header class="arcade-header">
     <div class="header-top-hud">
-      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value" style="color:var(--neon-pink);">P2 / SOFÍA
+      <div class="hud-item"><span>PERSONAJE:</span> <span class="hud-value p2-hud-accent">P2 / SOFÍA
           VALENZUELA</span></div>
       <div class="hud-item"><span>ROL:</span> <span class="hud-value">BACKEND WIZARD</span></div>
       <div class="hud-item"><span>CRÉDITOS:</span> <span class="hud-value credit-count-val">02</span></div>
@@ -24,7 +24,7 @@
 
     <div class="header-main-nav container">
       <a href="index.html" class="brand-logo" aria-label="Volver a la portada">
-        <div class="brand-icon" style="border-color:var(--neon-pink);">
+        <div class="brand-icon p2-brand-accent">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 2a3 3 0 0 0-3 3c0 1.3.84 2.4 2 2.82V11H7a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3h-4V7.82c1.16-.42 2-1.52 2-2.82a3 3 0 0 0-3-3zm-5 11h10a1 1 0 0 1 1 1v2H6v-2a1 1 0 0 1 1-1zm-1 5h12v2H6v-2z" />
@@ -70,9 +70,8 @@
     </div>
 
     <!-- TARJETA PRINCIPAL DEL PERSONAJE 2 -->
-    <section class="profile-hero-card" style="border-color:#3d1a3c;"
-      aria-label="Información principal de Sofía Valenzuela">
-      <div class="profile-avatar-large" style="border-color:var(--neon-pink); box-shadow:0 0 20px rgba(255,0,119,0.4);">
+    <section class="profile-hero-card p2-hero-accent" aria-label="Información principal de Sofía Valenzuela">
+      <div class="profile-avatar-large p2-avatar-accent">
         <!-- Avatar estilizado en CSS/SVG -->
         <svg viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)" stroke-width="2">
           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -82,12 +81,11 @@
       </div>
 
       <div class="profile-bio-info">
-        <div class="tag-p2"
-          style="display:inline-block; margin-bottom:0.5rem; font-family:var(--font-arcade); font-size:0.65rem; padding:0.25rem 0.6rem; border-radius:4px;">
+        <div class="tag-p2 p2-role-label">
           PERSONAJE 2 [BACKEND ARCHITECT]
         </div>
         <h1>Sofía Valenzuela</h1>
-        <div class="profile-role-title" style="color:var(--neon-pink);">Database Wizard & API Crafter</div>
+        <div class="profile-role-title p2-role-title">Database Wizard & API Crafter</div>
         <div class="profile-stats-pill-row">
           <div class="profile-badge">
             <span>📍 Ciudad:</span>
@@ -115,15 +113,56 @@
     <div class="profile-sections-grid">
       <!-- 4 HABILIDADES PRINCIPALES -->
       <section class="profile-panel" aria-labelledby="skills-heading-p2">
-        <h2 class="panel-heading" id="skills-heading-p2" style="color:var(--neon-pink);">
+        <h2 class="panel-heading p2-panel-title" id="skills-heading-p2">
           <span aria-hidden="true">💾</span> HABILIDADES
         </h2>
 
         <div class="media-items-grid skills-cards">
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg></div><div class="media-details"><div class="media-title">Arquitectura de APIs RESTful</div><div class="media-subtitle">Diseño de servicios para intercambiar datos entre aplicaciones.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"></path></svg></div><div class="media-details"><div class="media-title">Modelado de bases de datos SQL</div><div class="media-subtitle">Organización de datos y relaciones en bases relacionales.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5l3 2"></path><circle cx="12" cy="12" r="9"></circle><path d="M5 3 3 5m16-2 2 2"></path></svg></div><div class="media-details"><div class="media-title">Lógica asíncrona en JavaScript</div><div class="media-subtitle">Gestión de tareas y respuestas sin bloquear la aplicación.</div></div></article>
-          <article class="media-card"><div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4m-4 4v2"></path></svg></div><div class="media-details"><div class="media-title">Seguridad web y encriptación</div><div class="media-subtitle">Protección de datos y control de acceso a los servicios.</div></div></article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Arquitectura de APIs RESTful</div>
+              <div class="media-subtitle">Diseño de servicios para intercambiar datos entre aplicaciones.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Modelado de bases de datos SQL</div>
+              <div class="media-subtitle">Organización de datos y relaciones en bases relacionales.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 8v5l3 2"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M5 3 3 5m16-2 2 2"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Lógica asíncrona en JavaScript</div>
+              <div class="media-subtitle">Gestión de tareas y respuestas sin bloquear la aplicación.</div>
+            </div>
+          </article>
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4m-4 4v2"></path>
+              </svg></div>
+            <div class="media-details">
+              <div class="media-title">Seguridad web y encriptación</div>
+              <div class="media-subtitle">Protección de datos y control de acceso a los servicios.</div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -131,11 +170,10 @@
       <section class="profile-panel" aria-labelledby="favorites-heading-p2">
         <h2 class="panel-heading" id="favorites-heading-2">PELÍCULAS FAVORITAS</h2>
 
-        <h3
-          style="font-family: var(--font-arcade); font-size: 0.72rem; color: var(--neon-cyan); margin-bottom: 0.8rem;">
+        <h3 class="p2-panel-subheading">
           TRES PELÍCULAS FAVORITAS
         </h3>
-        <div class="media-items-grid" style="margin-bottom: 1.8rem;">
+        <div class="media-items-grid p2-favorites-spacing">
           <div class="media-card">
             <div class="media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -200,7 +238,7 @@
         <h2 class="panel-heading" id="discos-heading-2">DISCOS FAVORITOS</h2>
         <div class="media-items-grid">
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p2-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -214,7 +252,7 @@
           </div>
 
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p2-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -228,7 +266,7 @@
           </div>
 
           <div class="media-card">
-            <div class="media-icon" style="color: var(--neon-yellow);">
+            <div class="media-icon p2-media-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <circle cx="12" cy="12" r="3"></circle>
@@ -244,28 +282,24 @@
     </div>
 
     <!-- INTERACCIÓN DINÁMICA PROPIA: CONSOLA DE BENCHMARKING DE DATOS -->
-    <section class="profile-interactive-panel"
-      style="border-color:var(--neon-pink); box-shadow:0 0 25px rgba(255,0,119,0.15);"
-      aria-labelledby="interactive-heading-p2">
-      <h2 class="interactive-title" id="interactive-heading-p2" style="color:var(--neon-pink);">
+    <section class="profile-interactive-panel p2-interactive-panel" aria-labelledby="interactive-heading-p2">
+      <h2 class="interactive-title p2-interactive-title" id="interactive-heading-p2">
         ★ INTERACCIÓN PROPIA: ARCADE QUERY & API BENCHMARKER ★
       </h2>
       <p class="interactive-desc">
         Sofía diseñó este simulador de latencia para evaluar la velocidad de respuesta de las consultas del arcade:
       </p>
 
-      <div
-        style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.2rem;">
+      <div class="p2-query-header">
         <button class="btn-arcade btn-pink" id="p2-btn-query" type="button">
           EJECUTAR QUERY DE PRUEBA
         </button>
-        <div style="font-family:var(--font-arcade); font-size:0.75rem; color:var(--neon-yellow);">
-          LATENCIA: <span id="p2-ping-val" style="color:var(--neon-green);">-- ms</span>
+        <div class="p2-query-label">
+          LATENCIA: <span id="p2-ping-val" class="p2-query-value">-- ms</span>
         </div>
       </div>
 
-      <pre id="p2-response-log"
-        style="background:#060810; border:2px solid #283359; border-radius:8px; padding:1.2rem; font-family:'Courier New', monospace; font-size:0.85rem; color:var(--text-muted); overflow-x:auto;">
+      <pre id="p2-response-log" class="p2-query-output">
 // Presiona el botón para disparar una petición simulada con latencia calculada dinámicamente...
         </pre>
     </section>
@@ -273,10 +307,10 @@
     <!-- NAVEGADOR ENTRE PERSONAJES -->
     <nav class="profile-switcher" aria-label="Navegación entre perfiles">
       <a href="perfil-integrante-1.html" class="btn-arcade btn-cyan">
-        ← ANTERIOR: ALEX (P1)
+        ← ANTERIOR: DAVID
       </a>
       <a href="perfil-integrante-3.html" class="btn-arcade btn-coin">
-        SIGUIENTE: MATEO (P3) →
+        SIGUIENTE: MATEO →
       </a>
     </nav>
   </main>
