@@ -1,6 +1,30 @@
 /* ==========================================================================
    ESTILOS DE LA BITÁCORA (bitacora.html)
    ========================================================================== */
+.back-navigation {
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-arcade);
+  font-size: 0.68rem;
+  color: var(--neon-cyan);
+  background: #14182a;
+  border: 1px solid var(--border-arcade);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-back:hover {
+  border-color: var(--neon-cyan);
+  background: #1b213b;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
 .bitacora-header {
   padding: 3rem 0 1.5rem;
   text-align: center;
