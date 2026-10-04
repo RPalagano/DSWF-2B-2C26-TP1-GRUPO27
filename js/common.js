@@ -1,5 +1,5 @@
 // =============================================================================
-// 1. SISTEMA DE AUDIO CHIPTUNE RETRO (Sintetizador Web Audio API)
+// 1. SISTEMA DE AUDIO (Sintetizador Web Audio API)
 // No requiere archivos de audio externos, funciona directo en el navegador
 // =============================================================================
 const ArcadeAudio = {
@@ -200,7 +200,7 @@ function setupAudioToggle() {
 
 function setupGlobalCoinMechanism() {
   let credits = parseInt(sessionStorage.getItem('arcade_credits') || '2', 10);
-  
+
   const updateCreditDisplays = () => {
     document.querySelectorAll('.credit-count-val').forEach(el => {
       el.textContent = credits.toString().padStart(2, '0');
@@ -210,7 +210,7 @@ function setupGlobalCoinMechanism() {
   updateCreditDisplays();
 
   // Función global para insertar moneda
-  window.insertCoin = function() {
+  window.insertCoin = function () {
     credits += 1;
     sessionStorage.setItem('arcade_credits', credits);
     updateCreditDisplays();

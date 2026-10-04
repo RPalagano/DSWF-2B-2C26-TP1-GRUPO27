@@ -26,7 +26,8 @@
   transition: all 0.2s ease;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
   color: #0b0d17;
   background: var(--neon-yellow);
   border-color: var(--neon-yellow);
@@ -55,11 +56,21 @@
   border-color: #3b4773;
 }
 
-.log-entry.category-diseno { border-left-color: var(--neon-pink); }
-.log-entry.category-organizacion { border-left-color: var(--neon-yellow); }
-.log-entry.category-problemas { border-left-color: #ff3344; }
-.log-entry.category-soluciones { border-left-color: var(--neon-green); }
-.log-entry.category-cambios { border-left-color: var(--neon-cyan); }
+.log-entry.category-diseno {
+  border-left-color: var(--neon-pink);
+}
+
+.log-entry.category-organizacion {
+  border-left-color: var(--neon-yellow);
+}
+
+.log-entry.category-problemas {
+  border-left-color: #ff3344;
+}
+
+.log-entry.category-soluciones {
+  border-left-color: var(--neon-green);
+}
 
 .log-header {
   display: flex;
@@ -78,11 +89,29 @@
   text-transform: uppercase;
 }
 
-.tag-diseno { background: rgba(255, 0, 119, 0.15); color: var(--neon-pink); border: 1px solid var(--neon-pink); }
-.tag-organizacion { background: rgba(255, 230, 0, 0.15); color: var(--neon-yellow); border: 1px solid var(--neon-yellow); }
-.tag-problemas { background: rgba(255, 51, 68, 0.15); color: #ff5566; border: 1px solid #ff5566; }
-.tag-soluciones { background: rgba(57, 255, 20, 0.15); color: var(--neon-green); border: 1px solid var(--neon-green); }
-.tag-cambios { background: rgba(0, 240, 255, 0.15); color: var(--neon-cyan); border: 1px solid var(--neon-cyan); }
+.tag-diseno {
+  background: rgba(255, 0, 119, 0.15);
+  color: var(--neon-pink);
+  border: 1px solid var(--neon-pink);
+}
+
+.tag-organizacion {
+  background: rgba(255, 230, 0, 0.15);
+  color: var(--neon-yellow);
+  border: 1px solid var(--neon-yellow);
+}
+
+.tag-problemas {
+  background: rgba(255, 51, 68, 0.15);
+  color: #ff5566;
+  border: 1px solid #ff5566;
+}
+
+.tag-soluciones {
+  background: rgba(57, 255, 20, 0.15);
+  color: var(--neon-green);
+  border: 1px solid var(--neon-green);
+}
 
 .log-date {
   font-size: 0.85rem;
@@ -110,3 +139,12 @@
   margin-bottom: 0.4rem;
 }
 
+
+.back-navigation-left {
+  text-align: left
+}
+
+.bitacora-return {
+  text-align: center;
+  margin-bottom: 4rem
+}

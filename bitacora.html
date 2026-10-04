@@ -43,10 +43,10 @@
           <li class="nav-dropdown"><button class="nav-link dropdown-toggle" type="button" aria-expanded="false"
               aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button>
             <ul class="dropdown-menu" id="character-menu">
-              <li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li>
-              <li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li>
-              <li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li>
-              <li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li>
+              <li><a href="perfil-integrante-1.html" class="nav-link">David</a></li>
+              <li><a href="perfil-integrante-2.html" class="nav-link">Rocío</a></li>
+              <li><a href="perfil-integrante-3.html" class="nav-link">Dante</a></li>
+              <li><a href="perfil-integrante-4.html" class="nav-link">Candela</a></li>
             </ul>
           </li>
           <li><a href="bitacora.html" class="nav-link active">BITÁCORA</a></li>
@@ -62,7 +62,7 @@
 
   <main class="container">
     <div class="bitacora-header">
-      <div class="back-navigation" style="text-align: left;">
+      <div class="back-navigation back-navigation-left">
         <a href="index.html" class="btn-back">
           ← VOLVER A LA MÁQUINA ARCADE
         </a>
@@ -82,7 +82,6 @@
         <button class="filter-btn" data-filter="organizacion" type="button">ORGANIZACIÓN</button>
         <button class="filter-btn" data-filter="problemas" type="button">PROBLEMAS ENCONTRADOS</button>
         <button class="filter-btn" data-filter="soluciones" type="button">SOLUCIONES APLICADAS</button>
-        <button class="filter-btn" data-filter="cambios" type="button">CAMBIOS REALIZADOS</button>
       </div>
     </div>
 
@@ -93,7 +92,6 @@
       <article class="log-entry category-diseno" id="diseno">
         <div class="log-header">
           <span class="log-tag tag-diseno">Decisión de Diseño</span>
-          <span class="log-date">Semana 1 — Fase Inicial</span>
         </div>
         <h2 class="log-title">1. Estética Arcade Retro con Ergonomía y Legibilidad Moderna</h2>
         <div class="log-content">
@@ -108,9 +106,10 @@
             <li><strong>Efecto Scanlines controlado:</strong> El filtro CRT simula las líneas de barrido de los
               monitores de tubo catódico de los años 80/90, pero agregamos un botón en el header para que cualquier
               usuario pueda desactivarlo si prefiere máxima claridad.</li>
-            <li><strong>Sin peso de imágenes externas:</strong> Para esta primera fase no usamos archivos de imagen
-              pesados; todos los gabinetes, ranuras de moneda y avatares fueron construidos con CSS3 puro y formas SVG
-              vectoriales ligeras.</li>
+            <li><strong>Imágenes y recursos visuales:</strong> En la página principal y en los perfiles incorporamos
+              imágenes locales, incluidos archivos en formato WebP para avatares y contenidos visuales. También
+              combinamos imágenes con iconos SVG y elementos creados con CSS para mantener la estética arcade en todo el
+              sitio.</li>
           </ul>
         </div>
       </article>
@@ -119,7 +118,6 @@
       <article class="log-entry category-organizacion" id="organizacion">
         <div class="log-header">
           <span class="log-tag tag-organizacion">Organización</span>
-          <span class="log-date">Semana 1 — Asignación de Roles</span>
         </div>
         <h2 class="log-title">2. Distribución de Tareas y Arquitectura por Archivos</h2>
         <div class="log-content">
@@ -142,7 +140,6 @@
       <article class="log-entry category-problemas" id="problemas">
         <div class="log-header">
           <span class="log-tag tag-problemas">Problemas Encontrados</span>
-          <span class="log-date">Semana 2 — Pruebas de Breakpoints</span>
         </div>
         <h2 class="log-title">3. Desafíos de Adaptabilidad y Desbordamiento en Celulares</h2>
         <div class="log-content">
@@ -165,47 +162,17 @@
       <article class="log-entry category-soluciones" id="soluciones">
         <div class="log-header">
           <span class="log-tag tag-soluciones">Soluciones Aplicadas</span>
-          <span class="log-date">Semana 2 — Refactorización</span>
         </div>
-        <h2 class="log-title">4. Tipografía Fluida clamp(), Web Audio API y Breakpoints Obligatorios</h2>
+        <h2 class="log-title">4. Navegación adaptable e interacciones</h2>
         <div class="log-content">
-          <p>
-            Implementamos soluciones nativas para resolver los problemas detectados sin recurrir a librerías externas:
-          </p>
+          <p>Organizamos la navegación y las interacciones utilizando los recursos incluidos en el proyecto:</p>
           <ul>
-            <li><strong>clamp() para títulos:</strong> Definimos <code>font-size: clamp(1.3rem, 4vw, 2.3rem)</code> para
-              asegurar que el título del arcade nunca desborde ni se quiebre en dispositivos de 400px.</li>
-            <li><strong>Breakpoints exactos:</strong> Definimos media queries en <strong>1200px</strong> (escritorio
-              amplio), <strong>900px</strong> (tablets con menú hamburguesa desplegable) y <strong>400px</strong>
-              (celulares en una sola columna vertical con botones de tamaño táctil mayor a 44px).</li>
-            <li><strong>Sintetizador Web Audio API:</strong> Los efectos de sonido de monedas (B5 a E6) y clics se
-              generan en tiempo real con osciladores <code>square</code> y <code>triangle</code> sólo tras el primer
-              clic del usuario, cumpliendo al 100% las políticas del navegador.</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- REGISTRO 5: CAMBIOS REALIZADOS -->
-      <article class="log-entry category-cambios" id="cambios">
-        <div class="log-header">
-          <span class="log-tag tag-cambios">Cambios Realizados</span>
-          <span class="log-date">Semana 3 — Entrega Etapa 1</span>
-        </div>
-        <h2 class="log-title">5. Cierre de la Primera Etapa y Preparación para la Siguiente</h2>
-        <div class="log-content">
-          <p>
-            Resumen de los componentes completados y listos para la segunda etapa:
-          </p>
-          <ul>
-            <li><strong>Portada completa:</strong> Presentación como máquina arcade para el público, botón funcional
-              para insertar monedas (con contador reactivo), selección de personajes P1, P2, P3 y P4 y consola de
-              comandos dev.</li>
-            <li><strong>3 Perfiles individuales listos:</strong> Cada perfil cuenta con sus 4 habilidades cuantificadas,
-              3 películas, 3 discos y su propia interacción JavaScript funcional.</li>
-            <li><strong>Bitácora interactiva:</strong> Sistema de filtrado por etiquetas para auditar cada etapa del
-              desarrollo del equipo.</li>
-            <li><strong>Siguiente etapa:</strong> Reemplazo de placeholders por fotografías y avatares finales de los
-              integrantes, y detalles gráficos complementarios.</li>
+            <li><strong>Menú adaptable:</strong> En pantallas medianas la navegación se transforma en un menú
+              desplegable; en móviles compactos las tarjetas y controles se acomodan en una columna.</li>
+            <li><strong>Controles compartidos:</strong> El script común administra el menú, el estado de las scanlines,
+              el audio y el contador de créditos durante la sesión.</li>
+            <li><strong>Interacciones por página:</strong> La portada incluye acciones de consola; el perfil P1 permite
+              cambiar paletas y el perfil P4 propone un quiz. La bitácora permite filtrar sus entradas.</li>
           </ul>
         </div>
       </article>
@@ -213,7 +180,7 @@
     </section>
 
     <!-- BOTONES DE RETORNO -->
-    <div style="text-align: center; margin-bottom: 4rem;">
+    <div class="bitacora-return">
       <a href="index.html" class="btn-arcade btn-coin">
         VOLVER A LA PORTADA PRINCIPAL
       </a>

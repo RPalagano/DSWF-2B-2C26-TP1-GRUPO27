@@ -39,10 +39,10 @@
           <li class="nav-dropdown"><button class="nav-link dropdown-toggle" type="button" aria-expanded="false"
               aria-controls="character-menu">PERSONAJES <span aria-hidden="true">▾</span></button>
             <ul class="dropdown-menu" id="character-menu">
-              <li><a href="perfil-integrante-1.html" class="nav-link">PERSONAJE 1</a></li>
-              <li><a href="perfil-integrante-2.html" class="nav-link">PERSONAJE 2</a></li>
-              <li><a href="perfil-integrante-3.html" class="nav-link">PERSONAJE 3</a></li>
-              <li><a href="perfil-integrante-4.html" class="nav-link">PERSONAJE 4</a></li>
+              <li><a href="perfil-integrante-1.html" class="nav-link">David</a></li>
+              <li><a href="perfil-integrante-2.html" class="nav-link">Rocío</a></li>
+              <li><a href="perfil-integrante-3.html" class="nav-link">Dante</a></li>
+              <li><a href="perfil-integrante-4.html" class="nav-link">Candela</a></li>
             </ul>
           </li>
           <li><a href="bitacora.html" class="nav-link">BITÁCORA</a></li>
@@ -80,17 +80,13 @@
                 <div class="screen-marquee"><span class="marquee-text">★ INSERT COIN TO START ★</span></div>
                 <div class="screen-player-preview">
                   <!-- <div class="pixel-avatar-frame" aria-hidden="true">👾</div> -->
-                   <div class="profile-avatar-large"
-     style="width:150px; height:150px; margin:0 auto 20px auto; border-color:var(--neon-yellow); box-shadow:0 0 20px rgba(255,230,0,0.4); border-radius:20px; overflow:hidden;">
+                  <div class="profile-avatar-large home-team-avatar">
 
-    <img src="img/PortadoDevTeam.png"
-         alt="Foto portada"
-         style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                    <img src="img/PortadoDevTeam.png" alt="Foto portada" class="home-team-avatar-image">
 
-</div>
+                  </div>
                   <div class="preview-name">DEV TEAM</div>
                   <div class="preview-role">4 PERSONAJES · 1 EQUIPO</div>
-                  <p>Selecciona una tarjeta para conocer a cada integrante.</p>
                 </div>
               </div>
               <div class="coin-door">
@@ -110,7 +106,7 @@
         <header class="section-header">
           <span class="section-badge">CHARACTER SELECT</span>
           <h2 class="section-title">NUESTRO EQUIPO</h2>
-          <p class="section-subtitle">¡Elige un personaje!</p>
+          <p>Selecciona una tarjeta para conocer a cada integrante.</p>
         </header>
         <div class="roster-grid">
           <a href="perfil-integrante-1.html" class="player-card"><span class="player-tag tag-p1">P1</span>
@@ -124,16 +120,14 @@
             <p class="player-select-label">Su misión: mantener el juego funcionando detrás de escena</p>
           </a>
           <a href="perfil-integrante-2.html" class="player-card"><span class="player-tag tag-p2">P2</span>
-            <div class="player-avatar-box" aria-hidden="true"><svg class="player-avatar-icon" viewBox="0 0 24 24"
-                fill="none" stroke="var(--neon-pink)" stroke-width="2">
-                <circle cx="12" cy="8" r="5"></circle>
-                <path d="M20 21a8 8 0 1 0-16 0"></path>
-              </svg></div>
-            <div class="player-info-block">
-              <h3 class="player-name">Integrante 2</h3>
-              <p class="player-role-badge">Personaje por completar</p>
+            <div class="player-avatar-box" aria-hidden="true">
+                <img src="img/Rocio.jpg" alt="Imagen de personaje Rocío Palagano" style="width:100%; height:100%;">
             </div>
-            <p class="player-select-label">PERFIL PRÓXIMAMENTE</p>
+            <div class="player-info-block">
+              <h3 class="player-name">Rocío Palagano </h3>
+              <p class="player-role-badge">Clase: Full-Stack</p>
+            </div>
+            <p class="player-select-label">Su misión: resolver problemas en todas las capas del juego</p>
           </a>
           <a href="perfil-integrante-3.html" class="player-card"><span class="player-tag tag-p3">P3</span>
             <div class="player-avatar-box" aria-hidden="true"><img src="img/Dante.webp" alt="" /></div>
@@ -150,14 +144,11 @@
                 <path d="M20 21a8 8 0 1 0-16 0"></path>
               </svg></div> -->
 
-              <div class="profile-avatar-large"
-     style="width:150px; height:150px; margin:0 auto 20px auto; border-color:var(--neon-yellow); box-shadow:0 0 20px rgba(255,230,0,0.4); border-radius:20px; overflow:hidden;">
+            <div class="profile-avatar-large home-team-avatar">
 
-    <img src="img/Candela.jpeg"
-         alt="Foto de Candela"
-         style="width:100%; height:100%; object-fit:cover; border-radius:20px;">
+              <img src="img/Candela.jpeg" alt="Foto de Candela" class="home-team-avatar-image">
 
-</div>
+            </div>
             <div class="player-info-block">
               <h3 class="player-name">CANDELA</h3>
               <p class="player-role-badge">Interaction Designer & Gameplay Architect</p>
@@ -181,7 +172,6 @@
               </div>
             </div>
             <div class="station-controls">
-              <p>Una interacción sencilla para darle vida a la portada.</p>
               <div class="button-grid-arcade"><button class="btn-joystick-action btn-action-a" id="btn-action-a"
                   type="button">[A] INICIAR</button><button class="btn-joystick-action btn-action-b" id="btn-action-b"
                   type="button">[B] SALUDAR</button><button class="btn-joystick-action btn-action-c" id="btn-action-c"
@@ -196,7 +186,7 @@
   <footer class="arcade-footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>Tu Máquina Retro Dev · Presentación del equipo</p><a href="bitacora.html">Consultar bitácora</a>
+        <p>Tu Máquina Retro Dev · Presentación del equipo</p>
       </div>
     </div>
   </footer>
