@@ -20,11 +20,11 @@ Sitio web del grupo 27 para presentar al equipo y su proceso de trabajo con una 
 
 ## Qué incluye
 
-- Portada con selección de personajes y enlaces a los perfiles.
-- Cuatro páginas de perfil para conocer a cada integrante.
-- Bitácora con entradas del proceso de desarrollo y filtros por categoría.
-- Interfaz adaptable a distintos tamaños de pantalla, con controles de audio y scanlines.
-- Interacción de consola en la portada y actividades en algunos perfiles.
+- Portada con selección de personajes y enlaces a los cuatro perfiles.
+- Bitácora del proceso de desarrollo, con filtros por categoría.
+- Controles para activar o desactivar audio y scanlines; el sitio recuerda estas preferencias.
+- Consola interactiva en la portada, selector de paletas en el perfil 1 y quiz en el perfil 4.
+- Diseño adaptable a pantallas de escritorio, tabletas y móviles.
 
 ## Tecnologías
 
@@ -34,6 +34,12 @@ Sitio web del grupo 27 para presentar al equipo y su proceso de trabajo con una 
 | CSS3 | Diseño, animaciones y adaptación a pantallas |
 | JavaScript | Navegación e interacciones |
 | Git y GitHub | Control de versiones y colaboración |
+
+## Uso de inteligencia artificial
+
+Usamos herramientas de IA como apoyo durante la planificación y el desarrollo. ChatGPT sugirió ideas para organizar el contenido y mejorar la navegación y la experiencia de uso. A partir de esas sugerencias se ajustó la presentación de las secciones y se incorporaron detalles como recordar las preferencias de audio y scanlines.
+
+Gemini aportó ideas para la parte visual y sugirió algunos componentes interactivos con comportamiento, como la consola, el selector de paletas y el quiz. El equipo revisó y adaptó las propuestas al diseño y a las necesidades del sitio.
 
 ## Estructura
 
@@ -50,7 +56,10 @@ Sitio web del grupo 27 para presentar al equipo y su proceso de trabajo con una 
 │   ├── common.js
 │   ├── index.js
 │   ├── bitacora.js
-│   └── profile-1.js ... profile-4.js
+│   ├── profile-1.js
+│   ├── profile-2.js
+│   ├── profile-3.js
+│   └── profile-4.js
 ├── index.html
 ├── bitacora.html
 ├── perfil-integrante-1.html
@@ -69,10 +78,3 @@ No hace falta instalar dependencias. Cloná el repositorio y abrí `index.html` 
 - **Curso:** 2B / 2C 2026
 - **Trabajo:** TP1
 - **Grupo:** 27
-
-## 🕹️ GAME OVER?
-
-**¡Todavía no!**
-
-Este proyecto representa una partida más dentro de nuestro aprendizaje como desarrolladores.
-> **INSERT COIN → START → CODE → REPEAT**
